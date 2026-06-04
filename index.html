@@ -183,7 +183,7 @@
     <div class="meta">
       Report Week Ending: <b>2 Jun 2026</b><br>
       Data Cut-off: <b>2 Jun 2026</b> (TWF S-Curve V5 · Week 43 — Checked by OE)<br>
-      Prepared by Ophat &nbsp;·&nbsp; Reviewed by Nopparat / Ophat / Parisa<br>
+      Prepared by Ophat / Phakhathamon &nbsp;·&nbsp; Reviewed by Nopparat / Ophat / Parisa<br>
       Approved by Paitool (EVP)
     </div>
   </div>
@@ -918,7 +918,7 @@
           <td>16 EA · 750 m³/loc · 9 wk/loc</td>
           <td class="num">0.0%</td><td class="num">0.0%</td>
           <td class="num">0.0%</td>
-          <td><span class="pill amber">Blocked</span></td>
+          <td><span class="pill amber">Not Started</span></td>
           <td>Awaiting Farmland Conversion permit — not yet started</td>
         </tr>
         <tr>
@@ -995,7 +995,7 @@
         <div class="wpkt"><div class="kl">Plan %</div><div class="kv">0.0%</div></div>
         <div class="wpkt"><div class="kl">Actual %</div><div class="kv">0.0%</div></div>
         <div class="wpkt"><div class="kl">Variance</div><div class="kv" style="color:var(--amber)">0.0%</div></div>
-        <div class="wpkt"><div class="kl">Status</div><div class="kv"><span class="pill amber">Blocked</span></div></div>
+        <div class="wpkt"><div class="kl">Status</div><div class="kv"><span class="pill amber">Not Started</span></div></div>
         <div class="wpkt"><div class="kl">WTGs Complete</div><div class="kv">0 / 16</div></div>
         <div class="wpkt"><div class="kl">Constraint</div><div class="kv" style="font-size:11px;color:var(--red)">Farmland Conversion permit pending</div></div>
       </div>
@@ -1564,7 +1564,7 @@
             <td>Construction Plan Notification (METI)</td>
             <td>METI</td><td>CEEC</td><td class="center">Y</td>
             <td>Jun 2026</td>
-            <td><span class="pill red">Blocked</span></td>
+            <td><span class="pill amber">In Progress</span></td>
             <td>M4 received ✅; document review ongoing (2 consultants); submission now targeted end-Jun 2026; 30-day waiting period after submission → commencement mid-Jul 2026</td>
           </tr>
           <tr>
@@ -2361,7 +2361,7 @@
 
   <footer>
     2 Jun 2026 &nbsp;·&nbsp; B.GRIMM Project Coordination Team &nbsp;·&nbsp;
-    Prepared by Ophat Ketprakong &nbsp;·&nbsp; Reviewed by Nopparat Honghin / Ophat Ketprakong / Parisa Noosaeng &nbsp;·&nbsp;
+    Prepared by Ophat Ketprakong / Phakhathamon Sompong &nbsp;·&nbsp; Reviewed by Nopparat Honghin / Ophat Ketprakong / Parisa Noosaeng &nbsp;·&nbsp;
     Approved by Paitool Paisalsukwittaya (EVP)<br>
     Data source: JV Weekly Progress Report No. 26 (TWF S-CURVE V5 · Engineering V5 · Construction V5 · 33kV V5) · 2 Jun 2026 · MOM Weekly Meeting No.26 (28 May 2026)
   </footer>
@@ -3645,7 +3645,7 @@
     ['Critical Path',2,'NK Certification (M1–M4 + Conformity)','Nippon Kaiji Kyokai','CEEC','Y','Y','2026-03-31','2026-03-20','Done','Enables Construction Plan Notification'],
     ['Critical Path',3,'Farmland Conversion (Temporary)','Local Agri. Committee','Airu','Y','Y','2026-07-31','','In Progress','Submitted 16 May; 2–3 month review; WTG foundations gated'],
     ['Critical Path',4,'Forest Land Development','Forestry Bureau','OTAK','Y','N','2025-11-30','2025-11-20','Done','—'],
-    ['Critical Path',5,'Construction Plan Notification (METI)','METI','CEEC','Y','Y','2026-06-30','','Blocked','Pending NK M4 &amp; CEEC→CEF Logistics payment'],
+    ['Critical Path',5,'Construction Plan Notification (METI)','METI','CEEC','Y','Y','2026-06-30','','In Progress','M4 received ✅; document review ongoing; submission target end-Jun 2026; construction not started'],
     ['Critical Path',6,'Substation 110 kV Connection','Chugoku Electric','OTAK','N','N','2025-09-30','2025-09-20','Done','Re-commissioning test Q3 2027'],
     ['Critical Path',7,'Road Use Permission','Local Road Authority','OTAK','Y','Y','2025-11-30','2025-11-26','Done','Approved 26-Nov-2025'],
     ['Critical Path',8,'COD Application','METI','OTAK','Y','Y','2027-09-30','','In Progress','Documentation prep; ongoing'],
@@ -4192,7 +4192,7 @@ window.REPORT_DATA = {
     { name:'EIA', status:'Done', note:'Approved' },
     { name:'NK Certification (M1–M4)', status:'Done', note:'M4 received ✅ — closed per MOM-009/MR-009' },
     { name:'Farmland Conversion (Temp)', status:'In Progress', note:'Submitted 13 May; awaiting Tsuyama City/Okayama Pref/MAFF' },
-    { name:'Forest Land Development', status:'In Progress', note:'Blocked by TOUKOU payment; WTG 1,2,3,4 affected' },
+    { name:'Forest Land Development', status:'In Progress', note:'Not started pending TOUKOU payment; WTG 1,2,3,4 affected; design interference issue with structural engineer' },
     { name:'Construction Plan Notification (METI)', status:'In Progress', note:'Document review ongoing; submission target end-Jun 2026' },
     { name:'110kV Substation', status:'Done', note:'Re-commissioning test Q3 2027' },
     { name:'Road Use Permission', status:'Done', note:'Approved 26-Nov-2025' },
@@ -4229,14 +4229,14 @@ window.REPORT_DATA = {
   ],
   keyItems: [
     { item:'Overall variance RED (−3.73%)', owner:'B.GRIMM / CEEC', status:'Critical', action:'Request CEEC/DENZAI recovery plan for construction acceleration; escalate to EVP/FVP if no plan by next meeting' },
-    { item:'33kV Switchgear — 0% vs 60% plan (GIS at site)', owner:'CEEC', status:'Blocked', action:'Immediately mobilize civil crew for switchgear foundation after METI notification approval (target mid-Jul)' },
+    { item:'33kV Switchgear — 0% vs 60% plan (GIS at site)', owner:'CEEC', status:'Not Started', action:'Immediately mobilize civil crew for switchgear foundation after METI notification approval (target mid-Jul)' },
     { item:'Farmland Conversion — 3 authority approvals pending', owner:'EPC / B.GRIMM', status:'In Progress', action:'EPC direct follow-up with Tsuyama City, Okayama Pref, MAFF; committee review scheduled — no schedule impact yet' },
     { item:'METI Construction Plan Notification', owner:'Owner / CEEC', status:'Delayed', action:'Target end-Jun; 30-day wait + commencement mid-Jul; any further slip directly impacts COD' },
-    { item:'TOUKOU payment — Forest Road design blocked', owner:'CEEC / Owner', status:'Blocked', action:'Resolve TOUKOU payment immediately; arrange structural engineer meeting; WTG 1–4 construction gated' },
+    { item:'TOUKOU payment — Forest Road design not started', owner:'CEEC / Owner', status:'Not Started', action:'Resolve TOUKOU payment immediately; arrange structural engineer meeting; WTG 1–4 construction not started' },
     { item:'WTG Delivery Plan (Vensys)', owner:'CEEC / DENZAI', status:'Pending', action:'Submit formal delivery plan + Sakai Minato route timeline report to B.GRIMM by 4-Jun meeting' },
     { item:'Nacelle Logo — final decision needed', owner:'B.GRIMM Management', status:'Urgent', action:'EPC requires final logo immediately for Vensys confirmation; management decision overdue' }
   ],
-  preparedBy:   'Ophat Ketprakong (Senior Project Manager, B.Grimm Power PLC)',
+  preparedBy:   'Ophat Ketprakong / Phakhathamon Sompong (B.Grimm Power PLC)',
   reviewedBy:   'Nopparat Honghin (FVP) · Ophat Ketprakong (Senior PM) · Parisa Noosaeng (Senior PM)',
   approvedBy:   'Paitool Paisalsukwittaya (EVP, B.Grimm Power PLC)'
 };
@@ -4248,6 +4248,18 @@ function generateWordReport() {
   var d = window.REPORT_DATA;
   var vc = function(s){ return s==='Green'?'#2E7D32':s==='Amber'?'#EF6C00':'#C62828'; };
   var vs = function(v){ return (v>=0?'+':'')+v.toFixed(2)+'%'; };
+
+  // ── Extract live S-Curve SVG from the page ──
+  var svgSection = '';
+  try {
+    var svgEl = document.querySelector('#t1 .chart-card svg');
+    if (svgEl) {
+      var clone = svgEl.cloneNode(true);
+      clone.setAttribute('width', '640'); clone.setAttribute('height', '255');
+      clone.style.width='640px'; clone.style.height='255px';
+      svgSection = '<div style="margin:8px 0 4px;text-align:center">' + new XMLSerializer().serializeToString(clone) + '</div>';
+    }
+  } catch(e) { svgSection = ''; }
 
   // ── WP table rows ──
   var wpRows = d.wps.map(function(wp){
@@ -4293,7 +4305,7 @@ function generateWordReport() {
 
   // ── Key items table ──
   var keyRows = d.keyItems ? d.keyItems.map(function(k,i){
-    var sc = k.status==='Critical'||k.status==='Blocked'?'#C62828':'#EF6C00';
+    var sc = k.status==='Critical'||k.status==='Not Started'||k.status==='Blocked'?'#C62828':'#EF6C00';
     return '<tr>' +
       '<td style="padding:4px 8px;border:1px solid #CCC;text-align:center;font-weight:bold">' + (i+1) + '</td>' +
       '<td style="padding:4px 8px;border:1px solid #CCC;font-weight:bold">' + k.item + '</td>' +
@@ -4303,120 +4315,225 @@ function generateWordReport() {
     '</tr>';
   }).join('') : '';
 
+  // ── S-Curve trend data ──
+  var scurveRows = d.scurveTrend ? d.scurveTrend.map(function(r){
+    var rv=r.variance; var rc=rv>=0?'#2E7D32':rv>=-3?'#EF6C00':'#C62828';
+    return '<tr><td style="text-align:center;border:1px solid #CCC;padding:4px 6px">'+r.week+'</td>'+
+      '<td style="text-align:center;border:1px solid #CCC;padding:4px 6px">'+r.date+'</td>'+
+      '<td style="text-align:center;border:1px solid #CCC;padding:4px 6px">'+r.plan.toFixed(2)+'%</td>'+
+      '<td style="text-align:center;border:1px solid #CCC;padding:4px 6px">'+r.actual.toFixed(2)+'%</td>'+
+      '<td style="text-align:center;border:1px solid #CCC;padding:4px 6px;color:'+rc+';font-weight:bold">'+vs(rv)+'</td>'+
+      '<td style="text-align:center;border:1px solid #CCC;padding:4px 6px;color:'+rc+';font-weight:bold">'+r.status+'</td></tr>';
+  }).join('') : '';
+
+  // ── WP table rows ──
+  var wpRows = d.wps.map(function(wp){
+    return '<tr><td style="padding:4px 8px;border:1px solid #CCC">'+wp.name+'</td>'+
+      '<td style="padding:4px 8px;border:1px solid #CCC;text-align:center">'+wp.wt+'%</td>'+
+      '<td style="padding:4px 8px;border:1px solid #CCC;text-align:center">'+wp.plan.toFixed(2)+'%</td>'+
+      '<td style="padding:4px 8px;border:1px solid #CCC;text-align:center">'+wp.actual.toFixed(2)+'%</td>'+
+      '<td style="padding:4px 8px;border:1px solid #CCC;text-align:center;color:'+vc(wp.status)+';font-weight:bold">'+vs(wp.variance)+'</td>'+
+      '<td style="padding:4px 8px;border:1px solid #CCC;font-size:9.5pt">'+wp.drivers+'</td></tr>';
+  }).join('')+
+  '<tr style="background:#EEF2F7">'+
+  '<td style="padding:4px 8px;border:1px solid #CCC;font-weight:bold">Overall</td>'+
+  '<td style="padding:4px 8px;border:1px solid #CCC;text-align:center;font-weight:bold">100%</td>'+
+  '<td style="padding:4px 8px;border:1px solid #CCC;text-align:center;font-weight:bold">'+d.overallPlan.toFixed(2)+'%</td>'+
+  '<td style="padding:4px 8px;border:1px solid #CCC;text-align:center;font-weight:bold">'+d.overallActual.toFixed(2)+'%</td>'+
+  '<td style="padding:4px 8px;border:1px solid #CCC;text-align:center;color:'+vc(d.varStatus)+';font-weight:bold">'+vs(d.overallVar)+'</td>'+
+  '<td style="padding:4px 8px;border:1px solid #CCC;font-size:9.5pt">TWF S-Curve V5 · Week '+d.weekNum+' · Checked by OE</td></tr>';
+
+  // ── Permits table ──
+  var permitRows = d.permitsStatus.map(function(p){
+    var pc=p.status==='Done'?'#2E7D32':p.status==='In Progress'?'#EF6C00':'#C62828';
+    return '<tr><td style="padding:4px 8px;border:1px solid #CCC">'+p.name+'</td>'+
+      '<td style="padding:4px 8px;border:1px solid #CCC;text-align:center;color:'+pc+';font-weight:bold">'+p.status+'</td>'+
+      '<td style="padding:4px 8px;border:1px solid #CCC;font-size:9.5pt">'+p.note+'</td></tr>';
+  }).join('');
+
+  // ── Key items ──
+  var keyRows = d.keyItems ? d.keyItems.map(function(k,i){
+    var sc=k.status==='Critical'||k.status==='Not Started'?'#C62828':'#EF6C00';
+    return '<tr><td style="padding:4px 8px;border:1px solid #CCC;text-align:center;font-weight:bold">'+(i+1)+'</td>'+
+      '<td style="padding:4px 8px;border:1px solid #CCC;font-weight:bold">'+k.item+'</td>'+
+      '<td style="padding:4px 8px;border:1px solid #CCC">'+k.owner+'</td>'+
+      '<td style="padding:4px 8px;border:1px solid #CCC;color:'+sc+';font-weight:bold">'+k.status+'</td>'+
+      '<td style="padding:4px 8px;border:1px solid #CCC;font-size:9.5pt">'+k.action+'</td></tr>';
+  }).join('') : '';
+
+  var S = '<br>';  // spacer shorthand
+  var tblS = 'border-collapse:collapse;width:100%;margin:6px 0 10px;font-size:10pt;';
+  var thS  = 'background:#2B4C7E;color:#fff;padding:5px 8px;border:1px solid #2B4C7E;font-weight:bold;';
+  var tdS  = 'padding:4px 8px;border:1px solid #CCCCCC;vertical-align:top;font-size:10pt;';
+
   var html =
-  '<!DOCTYPE html>' +
-  '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">' +
-  '<head><meta charset="UTF-8"><title>Tsuyama Wind Farm Weekly Report Week ' + d.weekNum + '</title>' +
-  '<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View><w:Zoom>90</w:Zoom><w:DoNotOptimizeForBrowser/></w:WordDocument></xml><![endif]-->' +
-  '<style>' +
-  '@page{size:21cm 29.7cm;margin:2.5cm 2cm 2.5cm 2.5cm}' +
-  'body{font-family:Calibri,Arial,sans-serif;font-size:11pt;color:#222;line-height:1.45}' +
-  'h1{font-size:14pt;color:#1F3A5F;margin:0 0 6px;text-align:center;font-weight:700}' +
-  'h2{font-size:11.5pt;color:#fff;background:#1F3A5F;padding:5px 10px;margin:16px 0 6px;page-break-after:avoid}' +
-  'h3{font-size:10.5pt;color:#1F3A5F;margin:10px 0 3px;border-left:4px solid #1F3A5F;padding-left:8px}' +
-  'table{border-collapse:collapse;width:100%;margin:6px 0 10px;font-size:10pt}' +
-  'th{background:#1F3A5F;color:#fff;padding:6px 8px;font-size:10pt;text-align:left;border:1px solid #1F3A5F}' +
-  'td{padding:4px 8px;border:1px solid #CCC;vertical-align:top}' +
-  '.meta-tbl td{border:none;padding:2px 8px;font-size:10.5pt}' +
-  '.meta-lbl{font-weight:bold;color:#444;min-width:120px;white-space:nowrap}' +
-  'ul{margin:3px 0 8px;padding-left:20px}li{margin:3px 0;font-size:10.5pt}' +
-  'p{margin:4px 0;font-size:10.5pt}' +
-  '.title-block{background:#1F3A5F;color:#fff;padding:14px 20px;margin-bottom:14px;text-align:center}' +
-  '.title-block h1{color:#fff;margin:0 0 4px}' +
-  '.title-block p{color:rgba(255,255,255,.85);margin:2px 0;font-size:10pt}' +
-  '.warn{color:#C62828;font-weight:bold;background:#FFF3F3;border-left:4px solid #C62828;padding:4px 8px;margin:6px 0}' +
-  '.sign-block{margin-top:22px;width:45%;display:inline-block;vertical-align:top}' +
-  '.sign-line{border-top:1px solid #555;margin-top:32px;padding-top:4px;font-size:10pt}' +
-  '.footer-note{margin-top:20px;font-size:8.5pt;color:#888;text-align:center;border-top:1px solid #DDD;padding-top:6px}' +
-  '</style></head><body>' +
+  '<!DOCTYPE html>'+
+  '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">'+
+  '<head><meta charset="UTF-8"><title>Tsuyama Wind Farm Progress Report Week '+d.weekNum+'</title>'+
+  '<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View><w:Zoom>95</w:Zoom><w:DoNotOptimizeForBrowser/></w:WordDocument></xml><![endif]-->'+
+  '<style>'+
+  '@page{size:21cm 29.7cm;margin:2.5cm 2.5cm 2.5cm 3cm}'+
+  'body{font-family:"Meiryo UI",Calibri,Arial,sans-serif;font-size:10.5pt;color:#000;line-height:1.5;margin:0;padding:0}'+
+  'h1{font-size:16pt;font-weight:bold;color:#1F3A5F;margin:0 0 8px;text-align:center}'+
+  '.sec-hd{font-size:11pt;font-weight:bold;color:#fff;background:#2B4C7E;padding:4px 10px;margin:12px 0 5px;page-break-after:avoid}'+
+  '.sub-hd{font-size:10.5pt;font-weight:bold;color:#1F3A5F;margin:8px 0 3px}'+
+  'table{border-collapse:collapse;width:100%;margin:4px 0 8px}'+
+  'th{background:#2B4C7E;color:#fff;padding:5px 8px;border:1px solid #2B4C7E;font-weight:bold;font-size:10pt}'+
+  'td{padding:4px 8px;border:1px solid #CCC;vertical-align:top;font-size:10pt}'+
+  'p{margin:3px 0;font-size:10.5pt}'+
+  'ul{margin:2px 0 5px;padding-left:22px}'+
+  'li{margin:2px 0;font-size:10.5pt}'+
+  '.meta td{border:none;padding:2px 6px;font-size:10.5pt}'+
+  '.meta .lbl{font-weight:bold;min-width:110px;color:#333}'+
+  '.att th{background:#D9D9D9;color:#000}'+
+  '.att td{background:#fff}'+
+  '.sign-tbl td{border:none;padding:4px 10px;width:50%;vertical-align:top}'+
+  '.sign-line{border-top:1px solid #333;margin-top:36px;padding-top:4px;font-size:10pt}'+
+  '.ft{font-size:8.5pt;color:#888;text-align:center;margin-top:16px;border-top:1px solid #DDD;padding-top:4px}'+
+  '</style></head><body>'+
 
-  // ── Cover block ──
-  '<div class="title-block">' +
-  '<h1>Tsuyama Wind Farm — Weekly Progress Report to Management</h1>' +
-  '<p>65.6 MW (DC) · 16 × VENSYS 115 · Okayama, Japan · FIT JPY 22/kWh · EPC: CEEC–Denzai · OE: OTAK</p>' +
-  '<p>Week ' + d.weekNum + ' &nbsp;|&nbsp; Report Date: ' + d.reportDate + ' &nbsp;|&nbsp; Ref: ' + d.momRef + '</p>' +
-  '</div>' +
+  // ── Title ──
+  '<p style="text-align:center;font-size:14pt;font-weight:bold;color:#1F3A5F;margin:0 0 4px">Monthly Progress Report to Management</p>'+
 
-  // ── Header metadata ──
-  '<table class="meta-tbl" style="margin-bottom:14px">' +
-  '<tr><td class="meta-lbl">Subject:</td><td>Tsuyama Wind Farm – Weekly Progress Report (as of ' + d.reportDate + ')</td></tr>' +
-  '<tr><td class="meta-lbl">Prepared by:</td><td>' + d.preparedBy + '</td></tr>' +
-  '<tr><td class="meta-lbl">Reviewed by:</td><td>' + d.reviewedBy + '</td></tr>' +
-  '<tr><td class="meta-lbl">Approved by:</td><td>' + d.approvedBy + '</td></tr>' +
-  '</table>' +
+  // ── Header table ──
+  '<table class="meta" style="margin-bottom:10px">'+
+  '<tr><td class="lbl">Subject</td><td>Tsuyama Wind Farm – Monthly Progress Report to Management (as of '+d.reportDate+')</td></tr>'+
+  '<tr><td class="lbl">Date</td><td>'+d.reportDate+' (Reference: '+d.momRef+'; progress as of '+d.reportDate+')</td></tr>'+
+  '<tr><td class="lbl">Location</td><td>On-line</td></tr>'+
+  '</table>'+
 
-  // ══ SECTION 1: S-Curve ══
-  '<h2>1. S-Curve — Cumulative % Plan vs Actual</h2>' +
-  '<p>Source: TWF S-CURVE-V5-' + d.revDate.replace(/-/g,'') + '.xlsm (Checked by OE · OTAK) · Execute Project Schedule rows 146/149</p>' +
-  (d.scurveTrend ?
-    '<table><thead><tr><th>Week</th><th>Period Ending</th><th>Plan %</th><th>Actual %</th><th>Variance</th><th>Status</th></tr></thead><tbody>' + scurveRows + '</tbody></table>' : '') +
-  '<p style="color:' + vc(d.varStatus) + ';font-weight:bold">▶ Week ' + d.weekNum + ' Current: Plan <b>' + d.overallPlan.toFixed(2) + '%</b> &nbsp;|&nbsp; Actual <b>' + d.overallActual.toFixed(2) + '%</b> &nbsp;|&nbsp; Variance <b>' + vs(d.overallVar) + ' (' + d.varStatus + ')</b> &nbsp;|&nbsp; COD Countdown: <b>≈' + d.codWeeks + ' weeks</b></p>' +
-  (d.varStatus==='Red' ? '<p class="warn">⚠ Overall status changed to RED this week (was Amber Wk 42 at −2.82%). Plan is accelerating into construction peak while actual progress remains constrained by permit issues.</p>' : '') +
+  // ── Attendance table ──
+  '<p class="sub-hd">Attendance — Weekly Meeting No.'+d.weekNum+', '+d.reportDate+'</p>'+
+  '<table class="att"><thead><tr><th style="width:6%">No.</th><th>Company</th><th>Name</th><th>Position</th><th>Participation</th></tr></thead><tbody>'+
+  '<tr><td>1.</td><td>B.GRIMM Power PLC</td><td>Nopparat Honghin</td><td>FVP</td><td>On-Line (TH)</td></tr>'+
+  '<tr><td>2.</td><td>B.GRIMM Power PLC</td><td>Ophat Ketprakong</td><td>Senior Project Manager</td><td>On-Line (TH)</td></tr>'+
+  '<tr><td>3.</td><td>B.GRIMM Power PLC</td><td>Parisa Noosaeng</td><td>Senior Project Manager</td><td>On-Line (TH)</td></tr>'+
+  '<tr><td>4.</td><td>B.GRIMM Power PLC</td><td>Sirinuch Srijanwong</td><td>Assistant Project Manager</td><td>On-Line (TH)</td></tr>'+
+  '<tr><td>5.</td><td>B.GRIMM Power PLC</td><td>Chakarin ChariyaWetwatana</td><td>Engineer</td><td>On-Line (TH)</td></tr>'+
+  '<tr><td>6.</td><td>EPC (DENZAI)</td><td>Yoshii (吉井)</td><td>Site Manager</td><td>On-Site</td></tr>'+
+  '<tr><td>7.</td><td>EPC (CEEC)</td><td>Dong Yachao (董亚超)</td><td>On-Site</td><td>On-Site</td></tr>'+
+  '<tr><td>8.</td><td>EPC (CEEC)</td><td>Yabe (王首智)</td><td>On-Site</td><td>On-Site</td></tr>'+
+  '<tr><td>9.</td><td>OTAK JAPAN Inc.</td><td>Yoshihiro Uchimura (内村)</td><td>OE</td><td>On-Site</td></tr>'+
+  '<tr><td>10.</td><td>OTAK JAPAN Inc.</td><td>Miyagi (宮城)</td><td>OE</td><td>On-Line</td></tr>'+
+  '<tr><td>11.</td><td>LOHAS</td><td>Katyuta (勝田)</td><td>Owner</td><td>On-Site</td></tr>'+
+  '</tbody></table>'+
 
-  // ══ SECTION 2: Work Progress ══
-  '<h2>2. Work Progress — WP Variance Summary (Week ' + d.weekNum + ')</h2>' +
-  '<table><thead><tr><th>Work Package</th><th style="text-align:center">Weight %</th><th style="text-align:center">Plan %</th><th style="text-align:center">Actual %</th><th style="text-align:center">Variance</th><th>Key Drivers / Notes</th></tr></thead><tbody>' + wpRows + '</tbody></table>' +
-  '<p style="font-size:9pt;color:#666">* Weights: Engineering 10% · Procurement 30% · Construction 55% · T&amp;C 5% (per JV S-Curve V5)</p>' +
+  // ══════════════════════════════════════
+  // EXECUTIVE SUMMARY
+  // ══════════════════════════════════════
+  '<p style="font-size:13pt;font-weight:bold;color:#1F3A5F;margin:14px 0 4px;border-bottom:2px solid #1F3A5F;padding-bottom:3px">Executive Summary</p>'+
+  '<p class="sub-hd">Project Status Summary</p>'+
 
-  // ══ SECTION 3: Engineering & Permits ══
-  '<h2>3. Engineering and Permits</h2>' +
-  '<h3>3A. Engineering — Key Status</h3>' +
-  '<ul>' +
-  '<li>✅ <b>NK Certification M4</b> — Received by CEEC; M4 handover to CEF Wind Farm closed (per MOM-009/MR-009)</li>' +
-  '<li>✅ <b>WTG01 Foundation Layout &amp; Rebar</b> — OE Approved (Doc 68,69,72,73,78,78-1,79 — submitted 12-Nov-2025,承認済). Remaining: 風車基礎関連詳細図 (detail drawings) still needed.</li>' +
-  '<li>✅ <b>WTG11 Foundation Layout &amp; Rebar</b> — OE Approved (Doc 63,74,75,76,77,98,98-1,99 — submitted 12-Nov-2025, 承認済). Remaining: detail drawings.</li>' +
-  '<li>⚠ <b>SLD Rev.4 (SUB-001)</b> — Under Chugoku Electric review; response expected 25 May (overdue); follow-up required</li>' +
-  '<li>⚠ <b>110kV P&amp;C Scheme Drawing (SUB-004)</b> — Depends on SLD Rev.4; target updated to end-Jun 2026</li>' +
-  '<li>🔴 <b>Forest Road Design</b> — Blocked: CEEC unable to contact structural engineer (TOUKOU payment not finalized); WTG 1,2,3,4 designs gated; impacts 2026 construction plan</li>' +
-  (d.engineeringNotes ? d.engineeringNotes.map(function(n){ return '<li>' + n + '</li>'; }).join('') : '') +
-  '</ul>' +
-  '<h3>3B. Permits &amp; Licences — Critical Path</h3>' +
-  '<table><thead><tr><th style="width:28%">Permit</th><th style="width:12%">Status</th><th>Latest Update</th></tr></thead><tbody>' + permitRows + '</tbody></table>' +
+  // ── S-Curve ──
+  '<div class="sec-hd">S-Curve — Cumulative % Plan vs Actual</div>'+
+  '<p style="font-size:9pt;color:#555;margin:2px 0 6px">Source: TWF S-CURVE-V5-260602.xlsm (Checked by OE) · Execute Project Schedule</p>'+
+  svgSection +
+  '<table style="width:100%;margin:6px 0"><thead><tr><th style="width:8%">Week</th><th style="width:16%">Period Ending</th><th style="width:12%;text-align:center">Plan %</th><th style="width:12%;text-align:center">Actual %</th><th style="width:12%;text-align:center">Variance</th><th style="width:10%;text-align:center">Status</th></tr></thead><tbody>'+scurveRows+'</tbody></table>'+
 
-  // ══ SECTION 4: Procurement ══
-  '<h2>4. Procurement</h2>' +
-  '<ul>' + d.procurementNotes.map(function(n){ return '<li>' + n + '</li>'; }).join('') + '</ul>' +
-  '<h3>WTG Delivery Schedule — Key Points</h3>' +
-  '<ul>' +
-  '<li><b>Batch 1</b>: 5 sets (Nacelle, Tower, Blades) — delivery Oct 2026; <b>3 sets slipped from original 8-set Batch 1</b> → COD risk</li>' +
-  '<li><b>Batch 2</b>: 11 sets — Mar/Apr 2027; MV Switchgear B2 delivery Nov 2027 (⚠ +150 days vs plan Jun 2027)</li>' +
-  '<li><b>Port</b>: Sakai Minato confirmed (Tottori Port rejected by Pref); DENZAI meeting road admins/police for route survey</li>' +
-  '<li><b>FAT</b>: CEEC to confirm 3rd-party inspection status and submit inspector list to B.GRIMM by email</li>' +
-  '</ul>' +
+  // ── A) Work Progress ──
+  '<div class="sec-hd">A) Work Progress</div>'+
+  '<p>◆ Overall project progress is <strong>'+d.overallActual.toFixed(2)+'%</strong> (Plan <strong>'+d.overallPlan.toFixed(2)+'%</strong>) as of '+d.reportDate+' — variance <strong style="color:'+vc(d.varStatus)+'">'+vs(d.overallVar)+'</strong></p>'+
+  '<table><thead><tr><th>ITEMS</th><th style="text-align:center">Weight %</th><th style="text-align:center">PLAN ('+d.reportDate+')</th><th style="text-align:center">Actual ('+d.reportDate+')</th><th style="text-align:center">Delay/Ahead vs. Plan</th></tr></thead><tbody>'+wpRows+'</tbody></table>'+
+  '<p>◆ Overall variance <strong style="color:'+vc(d.varStatus)+'">'+vs(d.overallVar)+'</strong> — Engineering gap <strong>'+vs(d.wps[0].variance)+'</strong> driven by Forest Road design (TOUKOU payment pending) and SLD Rev.4 review overdue; Procurement nearly on plan ('+vs(d.wps[1].variance)+').</p>'+
+  '<p>◆ Construction (Weight 55%): Actual <strong>'+d.wps[2].actual.toFixed(2)+'%</strong> vs. Plan <strong>'+d.wps[2].plan.toFixed(2)+'%</strong> (<strong style="color:'+vc('Red')+'">'+vs(d.wps[2].variance)+'</strong>). 33kV Internal +150 m; External +175 m (Feeder② No.7 completed); No.26, No.14, JOINT No.11-24 completed.</p>'+
+  '<p>◆ 33kV Switchgear: GIS unit ✅ at site. Foundation/civil works not started — pending METI Construction Plan Notification.</p>'+
+  '<p>◆ Master Schedule update: Revised MS to be submitted by CEEC after receiving Farmland Conversion guidance from Tsuyama City. COD Countdown: ≈<strong>'+d.codWeeks+' weeks</strong> to 31 Dec 2027.</p>'+
 
-  // ══ SECTION 5: Construction ══
-  '<h2>5. Construction</h2>' +
-  '<h3>5A. 33kV Transmission Line</h3>' +
-  '<table style="width:100%"><thead><tr><th>Section</th><th style="text-align:center">Plan %</th><th style="text-align:center">Actual %</th><th style="text-align:center">Variance</th><th>Notes</th></tr></thead><tbody>' +
-  '<tr><td><b>Internal (12,524 m)</b></td><td style="text-align:center">62.0%</td><td style="text-align:center">39.93%</td><td style="text-align:center;color:#C62828;font-weight:bold">−22.1%</td><td>+150 m this period; No.26, No.14, JOINT No.11-24 completed</td></tr>' +
-  '<tr><td><b>External (24,512 m)</b></td><td style="text-align:center">43.5%</td><td style="text-align:center">33.40%</td><td style="text-align:center;color:#C62828;font-weight:bold">−10.1%</td><td>Feeder② No.7 + prep works completed; +175 m this period</td></tr>' +
-  '<tr style="background:#FFEBEE"><td><b>33kV Switchgear (GIS)</b></td><td style="text-align:center">60.0%</td><td style="text-align:center">0%</td><td style="text-align:center;color:#C62828;font-weight:bold">−60.0%</td><td>⚠ CRITICAL: GIS unit ✅ at site; foundation/civil work blocked by METI notification</td></tr>' +
-  '</tbody></table>' +
-  '<h3>5B. Civil Works Summary</h3>' +
-  '<ul>' + d.constructionNotes.map(function(n){ return '<li>' + n + '</li>'; }).join('') + '</ul>' +
+  // ── B) Permits and License ──
+  '<div class="sec-hd">B) Permits and License (Critical Path)</div>'+
+  '<p>◆ Items closed since previous report:</p>'+
+  '<ul>'+
+  '<li>▪ <strong>NK Certification M4 Handover:</strong> CEEC has received the M4 document. Closed. ✅</li>'+
+  '<li>▪ <strong>Construction Material Recycling Act:</strong> Submission completed 13 April 2026. Closed. ✅</li>'+
+  '<li>▪ <strong>Civil Aeronautics Act:</strong> Submission completed 30 April 2026. Closed. ✅</li>'+
+  '</ul>'+
+  '<p>◆ In progress / Watch-list:</p>'+
+  '<ul>'+
+  '<li>▪ <strong>Construction Plan Notification (METI):</strong> Documents under preparation by Owner + EPC (2 consultants engaged). Submission target end-June 2026 (delayed from end-May). ~30-day waiting period after submission; construction commencement expected mid-July 2026.</li>'+
+  '<li>▪ <strong>Temporary Farmland Conversion:</strong> Application submitted 13 May 2026. Approvals required from Tsuyama City, Okayama Prefecture, and MAFF (農水省). B.GRIMM requested EPC to follow up directly with authorities. Committee review schedule not impacted.</li>'+
+  '<li>▪ <strong>Forest Land Development (Rinchi-kaihatsu):</strong> CEEC in discussion with TOUKOU regarding takeover of previous project documents. Payment finalization pending. WTG foundations No.1, 2, 3, 4 (forest area) construction not started — EPC to coordinate TOUKOU payment and arrange structural engineer meeting by end of May.</li>'+
+  '<li>▪ <strong>Act on Regulation of Landfill and Specified Soil Fills:</strong> No progress — awaiting TOUKOU payment resolution. EPC will check and plan to finish end of June 2026.</li>'+
+  '</ul>'+
+  '<p>◆ B.GRIMM concern: Permit submission/approval schedules from CEEC remain unclear. B.GRIMM will follow master schedule and escalate to management if any delay impacts COD.</p>'+
+  '<table><thead><tr><th>Permit</th><th style="width:12%;text-align:center">Status</th><th>Latest Update (Week '+d.weekNum+')</th></tr></thead><tbody>'+permitRows+'</tbody></table>'+
 
-  // ══ SECTION 6: Key Items ══
-  '<h2>6. Key Items Requiring Management Attention</h2>' +
-  (keyRows ?
-    '<table><thead><tr><th style="width:3%">#</th><th style="width:22%">Item</th><th style="width:12%">Owner</th><th style="width:10%">Status</th><th>Required Action / Decision</th></tr></thead><tbody>' + keyRows + '</tbody></table>' :
-    d.attentionItems.map(function(a,i){ return '<p style="margin:5px 0">◆ (' + (i+1) + ') ' + a + '</p>'; }).join('')
-  ) +
+  // ── C) Engineering and Design ──
+  '<div class="sec-hd">C) Engineering and Design</div>'+
+  '<p>◆ <strong>M4 (NK Certification):</strong> Received by CEEC. M4 handover to CEF Wind Farm closed per MOM-009/Monthly Report MR-009. ✅</p>'+
+  '<p>◆ <strong>WTG Foundation Drawings — WTG01 &amp; WTG11:</strong> All foundation layout &amp; rebar drawings OE-Approved (承認済) per Engineering Progress V5-260602.</p>'+
+  '<ul>'+
+  '<li>▪ WTG01 (1号機): Doc 68, 69, 72, 73, 78, 78-1, 79 — submitted 12-Nov-2025, OE Approved ✅</li>'+
+  '<li>▪ WTG11 (11号機): Doc 63, 74, 75, 76, 77, 98, 98-1, 99 — submitted 12-Nov-2025, OE Approved ✅</li>'+
+  '<li>▪ Remaining: 風車基礎関連詳細図 (WTG Foundation Detail Drawings) — "Need to be prepared / reviewed" (0%)</li>'+
+  '</ul>'+
+  '<p>◆ <strong>Forest Road Design — Design Interference:</strong> EPC reported design interference between forest road retaining wall and WTG foundation. EPC needs confirmation meeting with Structural Engineer (TOUKOU) but is unable to contact due to payment not finalized. EPC to coordinate TOUKOU payment and arrange meeting; after resolution, discussion with Authority required.</p>'+
+  '<p>◆ <strong>Substation SLD Rev.4 (SUB-001):</strong> Under Chugoku Electric review — response expected 25 May (overdue); follow-up in progress.</p>'+
+  '<p>◆ <strong>110kV P&amp;C Scheme Drawing (SUB-004):</strong> Depends on SLD Rev.4 approval. Target updated to end-June 2026.</p>'+
 
-  // ── Sign-off ──
-  '<div style="margin-top:28px;page-break-inside:avoid">' +
-  '<div class="sign-block" style="margin-right:8%">' +
-  '<div class="sign-line">' + d.preparedBy + '<br><span style="font-size:9pt;color:#777">Prepared by</span></div>' +
-  '</div>' +
-  '<div class="sign-block">' +
-  '<div class="sign-line">' + d.reviewedBy + '<br><span style="font-size:9pt;color:#777">Reviewed by</span></div>' +
-  '</div>' +
-  '<div style="margin-top:18px;display:block">' +
-  '<div class="sign-line" style="display:inline-block;min-width:220px">' + d.approvedBy + '<br><span style="font-size:9pt;color:#777">Approved by</span></div>' +
-  '</div>' +
-  '</div>' +
+  // ── D) Procurement and Logistics ──
+  '<div class="sec-hd">D) Procurement and Logistics</div>'+
+  '<p>◆ <strong>WTG Master Fabrication Schedule / FAT / Delivery Plan:</strong> CEEC currently in discussion with Vensys. B.GRIMM requested CEEC to submit formal delivery plan report (including transportation route) and present to B.GRIMM.</p>'+
+  '<p>◆ <strong>FAT Third-Party Inspection:</strong> B.GRIMM requested CEEC to confirm FAT status with third-party inspector and submit list of inspectors by email.</p>'+
+  '<p>◆ <strong>WTG Delivery &amp; Transportation Route:</strong> Sakai Minato port confirmed (Tottori Port rejected by Prefectural Gov./MLIT). DENZAI visiting road administrators and police offices. Indicative timeline:</p>'+
+  '<ul>'+
+  '<li>▪ Transportation route survey — 31 Aug 2026</li>'+
+  '<li>▪ Engineering and design for route modification — 31 Aug 2026</li>'+
+  '<li>▪ Permits and licenses — 01 Nov 2026</li>'+
+  '<li>▪ Construction work (start–finish) — 01 Sep 2026 to 31 Oct 2026</li>'+
+  '</ul>'+
+  '<p>◆ <strong>WTG Delivery Batch Plan:</strong> Batch 1 = 5 sets (original: 8 sets) — 3 sets slipped to Batch 2. COD risk if erection schedule cannot recover. Batch 2 MV Switchgear delivery Nov 2027 (+150 days vs plan Jun 2027). B.GRIMM requests CEEC to discuss with Vensys for recovery.</p>'+
+  '<p>◆ <strong>33kV GIS Switchgear (Mitsubishi):</strong> Unit ✅ already delivered to site. Civil foundation work not started — pending METI notification approval.</p>'+
+  '<p>◆ <strong>Commercial — Advance Payment (CEEC):</strong> Issue closed ✅. OTAK payment to be reconfirmed by B.GRIMM Finance team.</p>'+
 
-  '<p class="footer-note">Tsuyama Wind Farm Weekly Progress Report — Week ' + d.weekNum + ' · ' + d.reportDate +
-  ' · Generated from dashboard_v' + d.revDate + '.html · B.GRIMM Power PLC</p>' +
+  // ── E) Construction ──
+  '<div class="sec-hd">E) Construction</div>'+
+  '<p>◆ <strong>External Site — 33kV Transmission Line</strong></p>'+
+  '<ul>'+
+  '<li>▪ Feeder② No.7 and preparation works completed (+175 m this period). Off-site Feeder② No.7 complete.</li>'+
+  '<li>▪ Next period: EPC planning segments No.28, 26, 17 and related joint equipment.</li>'+
+  '<li>▪ Cumulative: 33.40% actual vs plan 43.5% (Var −10.1%)</li>'+
+  '</ul>'+
+  '<p>◆ <strong>Internal Site — 33kV Transmission Line</strong></p>'+
+  '<ul>'+
+  '<li>▪ No.26, No.14, JOINT (No.11-24) completed (+150 m this period). Cumulative: 39.93% actual vs plan 62.0% (Var −22.1%).</li>'+
+  '<li>▪ Crushed-stone removal and transmission-line preparation works ongoing.</li>'+
+  '</ul>'+
+  '<p>◆ <strong>33kV Switchgear Foundation:</strong> Not started — GIS unit at site; civil/foundation work pending METI notification approval (target submission end-Jun; commencement mid-Jul).</p>'+
+  '<p>◆ <strong>WTG Foundation:</strong> Not started — gated by Farmland Conversion permit (Tsuyama City/Okayama Pref/MAFF) and METI Construction Plan Notification.</p>'+
+  '<p>◆ <strong>Concrete Plant Capacity Concern:</strong> CEEC revised schedule targets 3 WTG installations + 6 foundations in 2026 (vs. original 8). Concrete supply 250 m³/day/plant insufficient for 750 m³/foundation (~9 weeks/foundation). B.GRIMM requested CEEC/DENZAI to secure additional concrete plants and maintain original Master Schedule target.</p>'+
+  '<p>◆ <strong>Civil Works:</strong></p>'+
+  '<ul>'+
+  '<li>▪ Forest Road: Actual 33.75% vs plan 25.65% (+8.1% ahead); however design work not started due to TOUKOU payment issue.</li>'+
+  '<li>▪ Maintenance Road: Actual 19.5% vs plan 39.0% (−19.5%); farmland sections not started pending Farmland Conversion permit.</li>'+
+  '<li>▪ Transportation Route (Disaster Restoration): Completed ✅ (40.0%).</li>'+
+  '<li>▪ River Improvement (Gorinhara): 47.5% actual — progressing.</li>'+
+  '</ul>'+
+
+  // ── F) Other Items ──
+  '<div class="sec-hd">F) Other Items</div>'+
+  '<p>◆ <strong>Nacelle Logo (EPC side):</strong> B.GRIMM has sent 5 logo options to EPC and OE. Final decision requires B.GRIMM management approval. EPC (CEEC) must confirm final version to Vensys urgently.</p>'+
+  '<p>◆ <strong>B.GRIMM Site Visit:</strong> Mr. Paitool (EVP, B.GRIMM) site visit scheduled 26 Jul – 2 Aug 2026. Construction of WTG foundations should be underway by that time.</p>'+
+  '<p>◆ <strong>Next Meeting:</strong> 4 June 2026 (Thursday) 15:00 (JPT) / 14:00 (CHT) / 13:00 (THT)</p>'+
+
+  // ── Key Items ──
+  '<div class="sec-hd">Key Items Requiring Management Attention</div>'+
+  (d.keyItems ? d.keyItems.map(function(k,i){
+    var sc=k.status==='Critical'||k.status==='Not Started'?'color:#C62828':'color:#EF6C00';
+    return '<p style="margin:5px 0">◆ <strong>('+( i+1)+')</strong> '+k.item+' — <span style="'+sc+';font-weight:bold">'+k.status+'</span>: '+k.action+'</p>';
+  }).join('') :
+  d.attentionItems.map(function(a,i){ return '<p style="margin:5px 0">◆ ('+( i+1)+') '+a+'</p>'; }).join(''))+
+
+  // ── Signature block ──
+  '<div style="margin-top:30px">'+
+  '<p style="margin:0 0 6px;font-size:10.5pt"><strong>Prepared by</strong> Ophat Ketprakong (Senior Project Manager) / Phakhathamon Sompong (Coordinator) — B.GRIMM Power PLC</p>'+
+  '<p style="margin:4px 0;font-size:10.5pt"><strong>Reviewed and Approved by</strong></p>'+
+  '<p style="margin:2px 0;font-size:10.5pt">Paitool Paisalsukwittaya (EVP, B.GRIMM Power PLC)</p>'+
+  '<p style="margin:2px 0;font-size:10.5pt">Nopparat Honghin (FVP, B.GRIMM Power PLC)</p>'+
+  '<p style="margin:2px 0;font-size:10.5pt">Ophat Ketprakong (Senior Project Manager, B.GRIMM Power PLC)</p>'+
+  '<p style="margin:2px 0;font-size:10.5pt">Parisa Noosaeng (Senior Project Manager, B.GRIMM Power PLC)</p>'+
+  '</div>'+
+
+  '<p class="ft">Tsuyama Wind Farm — Weekly Progress Report Week '+d.weekNum+' · '+d.reportDate+' · Generated from dashboard_v'+d.revDate+'.html · B.GRIMM Power PLC</p>'+
   '</body></html>';
 
   var blob = new Blob(['﻿' + html], {type: 'application/msword;charset=utf-8'});
