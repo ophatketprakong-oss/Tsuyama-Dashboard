@@ -457,8 +457,13 @@
     <!-- ═══ Weather & Site Conditions — 21-Day Outlook ═══ -->
     <h2 class="section" style="margin-top:24px">Weather &amp; Site Conditions — 21-Day Outlook</h2>
     <div class="source-note" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-      <span>Source: Open-Meteo (ERA5/GFS reanalysis &amp; forecast) for site centroid <b>35.2644°N, 134.0809°E</b> (geometric centroid of all 16 WTG positions, El. ≈990 m) · Data as of 9 Jun 2026</span>
+      <span>Source: Open-Meteo (ERA5/GFS reanalysis &amp; forecast) for site centroid <b>35.2644°N, 134.0809°E</b> (geometric centroid of all 16 WTG positions, El. ≈990 m) · <span id="wx-status">Loading…</span></span>
       <span style="display:flex;gap:6px;flex-shrink:0">
+        <button id="wx-refresh" onclick="loadWeatherData()"
+          title="Re-fetch the live 21-day forecast from Open-Meteo (requires internet)"
+          style="padding:5px 12px;font-size:11px;font-weight:700;background:#fff;color:var(--navy);border:1px solid var(--navy);border-radius:5px;cursor:pointer;white-space:nowrap">
+          🔄 Refresh
+        </button>
         <button onclick="window.open('https://www.google.com/maps?q=35.2644,134.0809','_blank')"
           title="View the exact coordinates used to pull the weather data on Google Maps"
           style="padding:5px 12px;font-size:11px;font-weight:700;background:#fff;color:var(--navy);border:1px solid var(--navy);border-radius:5px;cursor:pointer;white-space:nowrap">
@@ -4463,42 +4468,91 @@ window.REPORT_DATA = {
 
 // ══════════════════════════════════════════════════════════
 // WEATHER & SITE CONDITIONS — 21-day outlook (Tab 1 / Overview)
+// Auto-refreshes from Open-Meteo every time the dashboard is opened
+// (online), centred on the viewer's current date. Falls back to the
+// embedded cached dataset (window.REPORT_DATA.weatherData, as of
+// weatherMeta.asOf) when offline or if the live call fails — so the
+// file still opens and works fully offline per CLAUDE.md.
 // ══════════════════════════════════════════════════════════
-function renderWeatherPanel() {
+const WX_ICONS  = {0:'☀️',1:'🌤',2:'⛅',3:'☁️',45:'🌫',48:'🌫',51:'🌦',53:'🌦',55:'🌧',61:'🌧',63:'🌧',65:'🌧',71:'🌨',73:'🌨',75:'🌨',80:'🌦',81:'🌧',82:'🌧',95:'⛈'};
+const WX_LABELS = {0:'Clear',1:'Mostly clear',2:'Partly cloudy',3:'Overcast',45:'Fog',48:'Fog',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',61:'Light rain',63:'Rain',65:'Heavy rain',71:'Light snow',73:'Snow',75:'Heavy snow',80:'Showers',81:'Showers',82:'Heavy showers',95:'Storm'};
+const WX_DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+function wxRisk(gust, precip) {
+  if (gust >= 50 || precip >= 15) return 'red';
+  if (gust >= 35 || precip >= 5)  return 'amber';
+  return 'green';
+}
+function wxFmtDM(dateStr) { return `${dateStr.slice(8,10)}/${dateStr.slice(5,7)}`; }
+function wxDayOfWeek(dateStr) { return WX_DOW[new Date(dateStr+'T00:00:00').getDay()]; }
+
+// Map an Open-Meteo /v1/forecast `daily{}` block (past_days=7,
+// forecast_days=14 → 21 days total) into the same row shape as the
+// embedded weatherData[], split into 3x7-day periods (last/this/next)
+// centred on "today" in the viewer's local clock.
+function transformOpenMeteo(daily) {
+  const out = [];
+  const n = daily.time.length;
+  for (let i = 0; i < n; i++) {
+    const dateStr = daily.time[i];
+    let period = 'last';
+    if (i >= 7 && i < 14) period = 'this';
+    else if (i >= 14) period = 'next';
+    out.push({
+      date: dateStr,
+      day: wxDayOfWeek(dateStr),
+      period,
+      tmax: daily.temperature_2m_max[i],
+      tmin: daily.temperature_2m_min[i],
+      precip: daily.precipitation_sum[i] ?? 0,
+      wind: daily.wind_speed_10m_max[i],
+      gust: daily.wind_gusts_10m_max[i],
+      code: daily.weathercode[i]
+    });
+  }
+  return out.slice(0, 21);
+}
+
+function renderWeatherPanel(wx, opts) {
+  opts = opts || {};
   const el = document.getElementById('weather-weeks');
   if (!el) return;
-  const wx = (window.REPORT_DATA && window.REPORT_DATA.weatherData) || [];
-  const ICONS  = {0:'☀️',1:'🌤',2:'⛅',3:'☁️',45:'🌫',48:'🌫',51:'🌦',53:'🌦',55:'🌧',61:'🌧',63:'🌧',65:'🌧',71:'🌨',73:'🌨',75:'🌨',80:'🌦',81:'🌧',82:'🌧',95:'⛈'};
-  const LABELS = {0:'Clear',1:'Mostly clear',2:'Partly cloudy',3:'Overcast',45:'Fog',48:'Fog',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',61:'Light rain',63:'Rain',65:'Heavy rain',71:'Light snow',73:'Snow',75:'Heavy snow',80:'Showers',81:'Showers',82:'Heavy showers',95:'Storm'};
-  function risk(gust, precip) {
-    if (gust >= 50 || precip >= 15) return 'red';
-    if (gust >= 35 || precip >= 5)  return 'amber';
-    return 'green';
+  wx = wx || [];
+
+  const STATIC_TITLES = {
+    last: 'Previous Week (28 May – 3 Jun)',
+    this: 'Current Week (4–10 Jun · cut-off 9 Jun)',
+    next: 'Next Week — Forecast (11–17 Jun)'
+  };
+  function periodTitle(key, days) {
+    if (!opts.live || !days.length) return STATIC_TITLES[key];
+    const range = `${wxFmtDM(days[0].date)} – ${wxFmtDM(days[days.length-1].date)}`;
+    if (key === 'last') return `Previous 7 Days (${range})`;
+    if (key === 'this') return `Current 7 Days (${range})`;
+    return `Next 7 Days — Forecast (${range})`;
   }
-  const weeks = [
-    { key:'last', title:'Previous Week (28 May – 3 Jun)' },
-    { key:'this', title:'Current Week (4–10 Jun · cut-off 9 Jun)' },
-    { key:'next', title:'Next Week — Forecast (11–17 Jun)' }
-  ];
+
+  const weeks = ['last','this','next'].map(key => ({ key, days: wx.filter(x => x.period === key) }));
   const STATUS = { red:['🔴','Work-impact'], amber:['🟡','Caution'], green:['🟢','Normal'] };
   const ROWS = [
-    { label:'Condition',  cls:'wx-icon',   fn: x => `<div style="display:flex;flex-direction:column;align-items:center;gap:1px"><span style="font-size:16px">${ICONS[x.code]||'☁️'}</span><span style="font-size:9px;color:var(--grey);white-space:nowrap">${LABELS[x.code]||''}</span></div>` },
+    { label:'Condition',  cls:'wx-icon',   fn: x => `<div style="display:flex;flex-direction:column;align-items:center;gap:1px"><span style="font-size:16px">${WX_ICONS[x.code]||'☁️'}</span><span style="font-size:9px;color:var(--grey);white-space:nowrap">${WX_LABELS[x.code]||''}</span></div>` },
     { label:'Temp (°C)',  cls:'',          fn: x => `${x.tmin.toFixed(0)}–${x.tmax.toFixed(0)}` },
     { label:'Rain (mm)',  cls:'',          fn: x => x.precip.toFixed(1) },
     { label:'Wind Speed (m/s)', cls:'',    fn: x => (x.wind/3.6).toFixed(1) },
     { label:'Wind Gust (m/s)', cls:'',     fn: x => (x.gust/3.6).toFixed(1) },
-    { label:'Status',     cls:'wx-status', fn: x => { const s = STATUS[risk(x.gust,x.precip)]; return s[0]+' '+s[1]; } }
+    { label:'Status',     cls:'wx-status', fn: x => { const s = STATUS[wxRisk(x.gust,x.precip)]; return s[0]+' '+s[1]; } }
   ];
+
   let totalRedThis = 0;
+  const todayStr = new Date().toISOString().slice(0,10);
   let grpRow = '<tr class="wx-grp"><th>21-Day Outlook</th>';
   let dateRow = '<tr class="wx-date"><th>Date</th>';
   weeks.forEach(wk => {
-    const days = wx.filter(x => x.period === wk.key);
-    grpRow += `<th colspan="${days.length}">${wk.title}</th>`;
-    days.forEach(x => {
-      const dd = x.date.slice(8,10), mm = x.date.slice(5,7);
-      if (wk.key === 'this' && risk(x.gust,x.precip) === 'red') totalRedThis++;
-      dateRow += `<th>${dd}/${mm}<span class="wx-day">${x.day}</span></th>`;
+    grpRow += `<th colspan="${wk.days.length}">${periodTitle(wk.key, wk.days)}</th>`;
+    wk.days.forEach(x => {
+      if (wk.key === 'this' && wxRisk(x.gust,x.precip) === 'red') totalRedThis++;
+      const isToday = opts.live && x.date === todayStr;
+      dateRow += `<th${isToday ? ' style="background:rgba(255,200,0,.35)"' : ''}>${wxFmtDM(x.date)}<span class="wx-day">${x.day}</span></th>`;
     });
   });
   grpRow += '</tr>';
@@ -4506,8 +4560,8 @@ function renderWeatherPanel() {
   const bodyRows = ROWS.map(row => {
     let tr = `<tr><th>${row.label}</th>`;
     weeks.forEach(wk => {
-      wx.filter(x => x.period === wk.key).forEach(x => {
-        const r = risk(x.gust, x.precip);
+      wk.days.forEach(x => {
+        const r = wxRisk(x.gust, x.precip);
         const cls = row.cls + (row.cls ? ' ' : '') + r;
         tr += `<td class="${cls.trim()}">${row.fn(x)}</td>`;
       });
@@ -4522,15 +4576,59 @@ function renderWeatherPanel() {
 
   const note = document.getElementById('weather-impact-note');
   if (note) {
+    const periodLabel = opts.live ? 'current 7-day period' : 'current report week';
     if (totalRedThis > 0) {
-      note.innerHTML = `⚠ <b>${totalRedThis} work-impacting day(s)</b> (gust ≥13.9 m/s and/or rain ≥15 mm) occurred during the current report week — `
-        + `likely contributing factor to 33kV cable/conduit pull-in and Civil Work (Maintenance Road, Gorinhara River) progress falling short of plan this week.`;
+      note.innerHTML = `⚠ <b>${totalRedThis} work-impacting day(s)</b> (gust ≥13.9 m/s and/or rain ≥15 mm) in the ${periodLabel} — `
+        + `monitor for impact on 33kV cable/conduit pull-in and Civil Work (Maintenance Road, Gorinhara River) progress.`;
     } else {
-      note.innerHTML = `✅ No work-impacting weather days recorded during the current report week.`;
+      note.innerHTML = `✅ No work-impacting weather days recorded in the ${periodLabel}.`;
     }
   }
 }
-renderWeatherPanel();
+
+// Try a live Open-Meteo fetch (21-day window, 7 days history + 14-day
+// forecast, Asia/Tokyo local days, centred on "today"). Falls back to
+// the embedded cached dataset if offline or the call fails/times out.
+async function loadWeatherData() {
+  const statusEl = document.getElementById('wx-status');
+  const refreshBtn = document.getElementById('wx-refresh');
+  const meta = (window.REPORT_DATA && window.REPORT_DATA.weatherMeta) || {};
+  const fallback = (window.REPORT_DATA && window.REPORT_DATA.weatherData) || [];
+
+  if (statusEl) statusEl.textContent = 'Refreshing live forecast…';
+  if (refreshBtn) refreshBtn.disabled = true;
+
+  if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+    renderWeatherPanel(fallback, { live:false });
+    if (statusEl) statusEl.innerHTML = `🟡 Offline — showing cached forecast as of <b>${meta.asOf}</b>`;
+    if (refreshBtn) refreshBtn.disabled = false;
+    return;
+  }
+
+  try {
+    const lat = meta.centroidLat, lon = meta.centroidLon;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}`
+      + `&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max,wind_gusts_10m_max,weathercode`
+      + `&timezone=Asia%2FTokyo&past_days=7&forecast_days=14`;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 8000);
+    const resp = await fetch(url, { signal: controller.signal });
+    clearTimeout(timer);
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const json = await resp.json();
+    const wx = transformOpenMeteo(json.daily);
+    renderWeatherPanel(wx, { live:true });
+    const now = new Date();
+    const ts = `${now.toLocaleDateString('en-GB')} ${now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})}`;
+    if (statusEl) statusEl.innerHTML = `🟢 Live (Open-Meteo, fetched ${ts})`;
+  } catch (e) {
+    renderWeatherPanel(fallback, { live:false });
+    if (statusEl) statusEl.innerHTML = `🟡 Offline / unreachable — showing cached forecast as of <b>${meta.asOf}</b>`;
+  } finally {
+    if (refreshBtn) refreshBtn.disabled = false;
+  }
+}
+loadWeatherData();
 
 // Live Windy.com map — lazy-loaded on click (requires internet, not loaded by default)
 function toggleWindyMap() {
