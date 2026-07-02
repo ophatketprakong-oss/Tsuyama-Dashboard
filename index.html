@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Tsuyama Wind Farm – Weekly Management Dashboard · Rev. 2026-06-04</title>
+<title>Tsuyama Wind Farm – Weekly Management Dashboard · Rev. 2026-06-30</title>
 <style>
   :root{
     --navy:#1F3A5F; --navy-dark:#142948; --grey:#555;
@@ -196,16 +196,16 @@
     <div>
       <h1>Tsuyama Wind Farm — Weekly Management Dashboard
         <span class="badge">Construction Phase</span>
-        <span class="badge">Week 45</span>
-        <span class="badge" style="background:rgba(255,200,0,.25);color:#FFE066">Rev. 2026-06-15</span>
+        <span class="badge">Week 48</span>
+        <span class="badge" style="background:rgba(255,200,0,.25);color:#FFE066">Rev. 2026-06-30</span>
       </h1>
       <div style="font-size:12px;opacity:.85;margin-top:4px">
         65.6 MW (DC) / 51.3 MW (AC) &nbsp;·&nbsp; 16 × VENSYS 115 &nbsp;·&nbsp; Okayama, Japan &nbsp;·&nbsp; Owner: Lohas Ece Spain + CEF &nbsp;·&nbsp; EPC JV: CEEC–Denzai &nbsp;·&nbsp; OE: OTAK
       </div>
     </div>
     <div class="meta">
-      Report Week Ending: <b>9 Jun 2026</b><br>
-      Data Cut-off: <b>9 Jun 2026</b> (Weekly Report No.28 · Week 45)<br>
+      Report Week Ending: <b>30 Jun 2026</b><br>
+      Data Cut-off: <b>30 Jun 2026</b> (Weekly Report No.29 · S-Curve Checked by OE · Week 48)<br>
       Prepared by Ophat / Phakhathamon &nbsp;·&nbsp; Reviewed by Nopparat / Ophat / Parisa<br>
       Approved by Paitool (EVP)
     </div>
@@ -219,25 +219,25 @@
     <div class="kpi">
       <div class="stripe"></div>
       <div class="label">Overall Plan %</div>
-      <div class="value">33.39%</div>
-      <div class="sub">Weekly Report No.28 · Week 45</div>
+      <div class="value">35.33%</div>
+      <div class="sub">Weekly Report No.29 · Week 48</div>
     </div>
     <div class="kpi">
       <div class="stripe"></div>
       <div class="label">Overall Actual %</div>
-      <div class="value">28.86%</div>
-      <div class="sub">As of 9 Jun 2026</div>
+      <div class="value">29.93%</div>
+      <div class="sub">As of 30 Jun 2026</div>
     </div>
     <div class="kpi red">
       <div class="stripe"></div>
       <div class="label">Variance</div>
-      <div class="value">−4.53%</div>
-      <div class="sub">🔴 Red (prev. −3.76% · Week 44)</div>
+      <div class="value">−5.40%</div>
+      <div class="sub">🔴 Red (prev. −5.51% · 23 Jun 2026)</div>
     </div>
     <div class="kpi">
       <div class="stripe"></div>
       <div class="label">COD Countdown</div>
-      <div class="value">≈ 81 wk</div>
+      <div class="value">≈ 78 wk</div>
       <div class="sub">Target 31 Dec 2027</div>
     </div>
     <div class="kpi amber">
@@ -262,7 +262,7 @@
   <section class="tab-panel active" id="t1">
 
     <div class="source-note" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-      <span>Source: Weekly Report No.28 · TWF S-CURVE-V5-260609.xlsx (Checked by OE) · Data as of 9 Jun 2026</span>
+      <span>Source: Weekly Report No.29 · TWF S-CURVE-V5-260630.xlsx (Checked by OE) · Data as of 30 Jun 2026</span>
       <button onclick="generateWordReport()" title="Generate Weekly Executive Summary Report (.doc) for management"
         style="padding:7px 16px;font-size:12px;font-weight:700;background:var(--navy);color:#fff;border:none;border-radius:5px;cursor:pointer;white-space:nowrap;flex-shrink:0">
         📄 Executive Summary (.doc)
@@ -272,15 +272,16 @@
     <h2 class="section">S-Curve — Cumulative % Plan vs Actual</h2>
     <div class="chart-card">
       <!--
-        Real data from TWF_S-CURVE-V5-260609.xlsx — Execute Project Schedule rows 146 (Plan Cum) / 149 (Actual Cum)
+        Real data from TWF_S-CURVE-V5-260630.xlsx (Weekly Report No.29, checked by OE) — Execute Project Schedule rows 146 (Plan Cum) / 149 (Actual Cum)
         Axis: X = Aug 1 2025 (serial 45870, x=50) → Dec 31 2027 (serial 46752, x=780), 882 days, 730px
               Y = 0% (y=240) → 100% (y=20), 220px
         Scale: x(serial) = 50 + round((serial-45870)*730/882)
                y(pct)    = 240 - round(pct*220)
-        Current week: Week 45 · Jun 9 2026 · x=308  Plan 33.39% (y=167)  Actual 28.86% (y=177)
-        Source: Weekly Report No.28 (9 Jun 2026) — data as of 9 Jun 2026
+        Current week: Week 48 · Jun 30 2026 · x=326  Plan 35.33% (y=162)  Actual 29.93% (y=174)
+        Prev report:  Week 47 · Jun 23 2026 · x=320  Plan 34.43% (y=164)  Actual 28.92% (y=176)
+        Source: Weekly Report No.29 — S-Curve Checked by OE — data as of 30 Jun 2026
       -->
-      <svg viewBox="0 0 800 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="S-curve plan vs actual — Week 45">
+      <svg viewBox="0 0 800 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="S-curve plan vs actual — Week 48">
         <!-- axes -->
         <line x1="50" y1="240" x2="780" y2="240" stroke="#999" stroke-width="1"/>
         <line x1="50" y1="20"  x2="50"  y2="240" stroke="#999" stroke-width="1"/>
@@ -329,42 +330,42 @@
         <polyline
           points="50,191 56,191 62,191 67,191 73,191 79,190 85,190 91,190 96,190 102,190 108,190 114,190 120,190 125,190 131,190 137,190 143,190 148,190 154,190 160,190 166,190 172,190 177,189 183,189 189,184 195,184 201,183 206,183 212,183 218,182 224,182 230,182 235,181 241,181 247,180 256,179 262,178 268,177 273,176 279,175 285,174 291,172 297,171 302,169 308,167 314,166 320,164 326,162 331,158 337,155 343,152 349,149 355,145 360,141 366,137 372,133 378,132 384,128 389,126 395,123 401,120 407,115 413,112 418,109 424,106 430,103 436,100 441,96 447,93 453,90 459,89 465,89 470,88 476,88 482,88 488,88 494,88 499,88 505,88 511,88 517,88 523,88 528,88 534,88 540,86 546,84 552,80 557,78 563,75 569,70 575,65 581,60 586,57 592,54 598,52 604,50 610,48 615,46 621,43 627,43 633,43 638,42 644,42 650,42 656,42 662,41 667,41 673,40 679,39 685,38 691,38 696,37 702,37 708,36 714,36 720,35 725,34 731,33 737,32 743,31 749,29 754,28 760,27 766,26 772,25 778,24"
           fill="none" stroke="#1F3A5F" stroke-width="2.5" stroke-linejoin="round"/>
-        <!-- ACTUAL curve — 45 weekly data points through Week 45 (9 Jun 2026) -->
+        <!-- ACTUAL curve — 48 weekly data points through Week 48 (30 Jun 2026) -->
         <polyline
-          points="50,190 56,190 62,190 67,190 73,190 79,190 85,190 91,190 96,190 102,190 108,190 114,190 120,190 125,190 131,190 137,190 143,190 148,190 154,190 160,190 166,190 172,190 177,190 183,190 189,190 195,190 201,190 206,190 212,190 218,190 224,190 230,190 235,190 241,187 247,187 256,182 262,182 268,179 273,179 279,179 285,178 291,177 297,177 302,177 308,177"
+          points="50,190 56,190 62,190 67,190 73,190 79,190 85,190 91,190 96,190 102,190 108,190 114,190 120,190 125,190 131,190 137,190 143,190 148,190 154,190 160,190 166,190 172,190 177,190 183,190 189,190 195,190 201,190 206,190 212,190 218,190 224,190 230,190 235,190 241,187 247,187 256,182 262,182 268,179 273,179 279,179 285,178 291,177 297,177 302,177 308,177 314,176 320,176 326,174"
           fill="none" stroke="#C62828" stroke-width="2.5" stroke-linejoin="round"/>
-        <!-- Cut-off line (Week 45 · 9 Jun 2026 · x=308, data as of 9 Jun) -->
-        <line x1="308" y1="18" x2="308" y2="240" stroke="#C62828" stroke-width="1" stroke-dasharray="4,3" opacity="0.7"/>
+        <!-- Cut-off line (Week 48 · 30 Jun 2026 · x=326, data as of 30 Jun — Weekly Report No.29) -->
+        <line x1="326" y1="18" x2="326" y2="240" stroke="#C62828" stroke-width="1" stroke-dasharray="4,3" opacity="0.7"/>
         <!-- Rotated cut-off date label -->
-        <text transform="rotate(-90,302,38)" x="302" y="38" font-size="9" fill="#C62828" text-anchor="start">9-Jun-26 (Wk 45)</text>
+        <text transform="rotate(-90,320,38)" x="320" y="38" font-size="9" fill="#C62828" text-anchor="start">30-Jun-26 (Wk 48)</text>
         <!-- Plan circle at current week -->
-        <circle cx="308" cy="167" r="5" fill="#1F3A5F" stroke="white" stroke-width="1.5"/>
+        <circle cx="326" cy="162" r="5" fill="#1F3A5F" stroke="white" stroke-width="1.5"/>
         <!-- Actual circle at current week -->
-        <circle cx="308" cy="177" r="5" fill="#C62828" stroke="white" stroke-width="1.5"/>
+        <circle cx="326" cy="174" r="5" fill="#C62828" stroke="white" stroke-width="1.5"/>
         <!-- Callout box -->
-        <rect x="318" y="145" width="148" height="72" rx="5" fill="white" fill-opacity="0.95" stroke="#DDD" stroke-width="1"/>
-        <text x="326" y="160" font-size="10" fill="#1F3A5F" font-weight="700">▪ Plan</text>
-        <text x="366" y="160" font-size="10" fill="#1F3A5F" font-weight="700">33.39%</text>
-        <text x="326" y="175" font-size="10" fill="#C62828" font-weight="700">▪ Actual</text>
-        <text x="366" y="175" font-size="10" fill="#C62828" font-weight="700">28.86%</text>
-        <line x1="326" y1="180" x2="458" y2="180" stroke="#EEE" stroke-width="0.8"/>
-        <text x="326" y="193" font-size="10" fill="#C62828" font-weight="700">▼ Var</text>
-        <text x="366" y="193" font-size="10" fill="#C62828" font-weight="700">−4.53% (Red)</text>
-        <!-- Previous report marker (2-Jun · Wk 44) -->
-        <circle cx="302" cy="177" r="3" fill="#C62828" opacity="0.35"/>
-        <circle cx="302" cy="169" r="3" fill="#1F3A5F" opacity="0.35"/>
-        <text x="262" y="168" font-size="9" fill="#AAA" text-anchor="middle">2-Jun (Wk 44)</text>
+        <rect x="336" y="138" width="148" height="72" rx="5" fill="white" fill-opacity="0.95" stroke="#DDD" stroke-width="1"/>
+        <text x="344" y="153" font-size="10" fill="#1F3A5F" font-weight="700">▪ Plan</text>
+        <text x="384" y="153" font-size="10" fill="#1F3A5F" font-weight="700">35.33%</text>
+        <text x="344" y="168" font-size="10" fill="#C62828" font-weight="700">▪ Actual</text>
+        <text x="384" y="168" font-size="10" fill="#C62828" font-weight="700">29.93%</text>
+        <line x1="344" y1="173" x2="476" y2="173" stroke="#EEE" stroke-width="0.8"/>
+        <text x="344" y="186" font-size="10" fill="#C62828" font-weight="700">▼ Var</text>
+        <text x="384" y="186" font-size="10" fill="#C62828" font-weight="700">−5.40% (Red)</text>
+        <!-- Previous report marker (Wk 47 · 23-Jun) -->
+        <circle cx="320" cy="176" r="3" fill="#C62828" opacity="0.35"/>
+        <circle cx="320" cy="164" r="3" fill="#1F3A5F" opacity="0.35"/>
+        <text x="296" y="156" font-size="9" fill="#AAA" text-anchor="middle">23-Jun (Wk 47)</text>
       </svg>
       <div class="legend">
         <span class="dot" style="background:#1F3A5F"></span>Plan (TWF S-Curve V5 · weekly data to Dec 2027)
         &nbsp;&nbsp;
-        <span class="dot" style="background:#C62828"></span>Actual (Week 1–45 · through 9-Jun-2026)
+        <span class="dot" style="background:#C62828"></span>Actual (Week 1–48 · through 30-Jun-2026)
         &nbsp;&nbsp;
-        <span style="color:var(--grey);font-size:11px">Prev. report Wk 44 (2-Jun): Plan 32.49% / Actual 28.73% / Var −3.76%</span>
+        <span style="color:var(--grey);font-size:11px">Prev. report Wk 47 (23-Jun): Plan 34.43% / Actual 28.92% / Var −5.51% &nbsp;|&nbsp; Last month (26-May): Plan 31.55% / Actual 28.70% / Var −2.85%</span>
       </div>
     </div>
 
-    <h2 class="section" style="margin-top:24px">Work-Package Variance — Week 45 (9 Jun 2026 · data as of 9 Jun)</h2>
+    <h2 class="section" style="margin-top:24px">Work-Package Variance — Week 48 (30 Jun 2026 · Weekly Report No.29, data checked by OE)</h2>
     <table class="data">
       <thead><tr>
         <th>Work Package</th>
@@ -379,29 +380,29 @@
         <tr>
           <td><b>Engineering</b></td>
           <td class="num">10.0%</td>
-          <td class="num">77.43%</td>
+          <td class="num">78.38%</td>
           <td class="num">65.67%</td>
-          <td class="num" style="color:var(--red);font-weight:600">−11.76%</td>
+          <td class="num" style="color:var(--red);font-weight:600">−12.71%</td>
           <td><span class="pill red">Red</span></td>
-          <td>Permits &amp; Approvals var widened to −23.00% (was −21.20%): METI Construction Plan Notification at 41% (doc submission 70%); Farmland Conversion (Temp.) at 50% (approval stage 50%); Forest Road design not started (TOKO payment unresolved); SLD Rev.4 review overdue; As-Built 0%</td>
+          <td>Permits var at −25.70% (List of Permits −28.56%); METI Construction Plan Notification submission delayed ~1 wk to ~1 Jul 2026 (CEEC workload); Farmland Conversion: submitted 18 Jun, MAFF review postponed to wk of 25 Jun — if accepted, August committee meeting; SD&amp;DD 93.25%/86.50% (General 100%/100%, Electrical 90%/90%, Civil 95%/80%); Forest Road design: pending TOKO contract finalization by CEEC</td>
         </tr>
         <tr>
           <td><b>Procurement</b></td>
           <td class="num">30.0%</td>
           <td class="num">30.56%</td>
-          <td class="num">29.46%</td>
-          <td class="num" style="color:var(--amber);font-weight:600">−1.10%</td>
+          <td class="num">29.47%</td>
+          <td class="num" style="color:var(--amber);font-weight:600">−1.09%</td>
           <td><span class="pill amber">Amber</span></td>
-          <td>Holding at Amber, marginal recovery (−1.12%→−1.10%). WTG &amp; Foundation 16.80%, WTG Related Equipment 9.78%, BOP Equipment 80.00% all unchanged; FAT 3rd-party candidate list with B.GRIMM; delivery plan PPT in preparation by DENZAI</td>
+          <td>MAJOR MILESTONE: BOP equipment all items at 100%/100% (33kV Internal Cable, Switchgear, External Cable, 110kV HV Substation — all delivered); SCADA equipment still 0%/0%; WTG Equipment 10%/9.78% (−0.22%); Equipment for Foundation 92%/80.30% (−11.70%); CEEC procurement &amp; delivery plan targeting end-Jul 2026 (draft for B.GRIMM visit mid-late Jul); WTG receipt at Sakai Minato Port targeted end-Oct 2026</td>
         </tr>
         <tr>
           <td><b>Construction</b></td>
           <td class="num">55.0%</td>
-          <td class="num">29.96%</td>
-          <td class="num">23.74%</td>
-          <td class="num" style="color:var(--red);font-weight:600">−6.22%</td>
+          <td class="num">33.32%</td>
+          <td class="num">25.69%</td>
+          <td class="num" style="color:var(--red);font-weight:600">−7.63%</td>
           <td><span class="pill red">Red</span></td>
-          <td>33kV Switchgear 0% vs plan ~70% (was 60%); 33kV Internal conduit +300m (cum. 7,472m, 59.66%), External conduit +585m (cum. 14,299m, 58.33%) — both behind accelerated plan; Civil Work slipping further (Maintenance Road 21.0% vs higher plan, Gorinhara River 50.0%); WTG Foundation not started (permits pending)</td>
+          <td>33kV var widened to −37.42%: Switchgear 0% vs plan 100% (−100%); Internal TL 40.69% vs plan 70% (−29.31%); External TL 35.25% vs plan 49.5% (−14.25%); Civil improved: Maintenance Road 21% vs plan 51% (−30%); Forest Road 36% vs plan 38.25% (−2.25%); Transport Route civil AHEAD at 67% vs plan 45% (+22%, pruning work progressing); Crushed-stone removal 95% (near done); WTG Foundation 0% vs plan 8% (−8%) — still gated by Farmland Conversion permit</td>
         </tr>
         <tr>
           <td><b>Test &amp; Commissioning</b></td>
@@ -410,16 +411,16 @@
           <td class="num">8.00%</td>
           <td class="num" style="color:var(--green);font-weight:600">+8.00%</td>
           <td><span class="pill green">Green</span></td>
-          <td>Grid connection 40% completed (early start — 110 kV substation re-commissioning prep)</td>
+          <td>Grid connection 40% completed (ahead of plan — 110 kV substation re-commissioning prep)</td>
         </tr>
         <tr style="background:#F2F2F2">
           <td><b>TOTAL (weighted)</b></td>
           <td class="num"><b>100.0%</b></td>
-          <td class="num"><b>33.39%</b></td>
-          <td class="num"><b>28.86%</b></td>
-          <td class="num" style="color:var(--red);font-weight:700">−4.53%</td>
+          <td class="num"><b>35.33%</b></td>
+          <td class="num"><b>29.93%</b></td>
+          <td class="num" style="color:var(--red);font-weight:700">−5.40%</td>
           <td><span class="pill red">Red</span></td>
-          <td>⚠ Variance widened from −3.76% to −4.53%, driven by Engineering (Permits &amp; Approvals −23.00%) and Construction (33kV Switchgear &amp; Civil Work slips); Procurement holding Amber (−1.10%); Revised MS stalled — CEEC management approval pending · Weekly Report No.28 (9 Jun 2026)</td>
+          <td>⚠ Variance improved slightly from −5.51% (23 Jun) to −5.40%; BOP procurement milestone (4 items at 100%/100%); OTAK payment CRITICAL escalation — 1st &amp; 2nd invoices outstanding, OTAK threatened to suspend reports/shared box if not confirmed by 30 Jun; METI submission delayed ~1 wk to ~1 Jul; Farmland Conversion: MAFF review pending end-Jun, August committee expected; Transport Route civil work AHEAD (+22%) · Weekly Report No.29, S-Curve checked by OE (30 Jun 2026)</td>
         </tr>
       </tbody>
     </table>
@@ -432,24 +433,22 @@
       <div class="panel">
         <h3>Top-5 Management Attention Items</h3>
         <ul class="attn">
-          <li><b>⚠ Overall variance widened to −4.53%</b> (from −3.76%) — Engineering Permits &amp; Approvals var now −23.00% (was −21.20%); Construction var widened to −6.22% (was −4.87%); 3 of 4 WPs remain Red.</li>
-          <li><b>33kV Switchgear — still 0% vs plan now ~70%</b> — GIS unit at site; civil/foundation works not started, pending METI Construction Plan Notification approval (now at 41% / doc submission 70%).</li>
-          <li><b>Farmland Conversion (Temporary) — still 50% overall, approval target slips to end-Aug 2026</b> (doc prep 100%, doc submission 100%, approval stage 50%); MAFF has raised comments and the application is not yet accepted — CEEC targeting acceptance by 22 Jun 2026 (each subsequent cycle adds ~1 month slip); CEEC reaffirms policy to obtain the permit and start construction within 2026.</li>
-          <li><b>Construction Plan Notification (METI) — 41% overall</b> (doc submission progressed to 70%); CEEC preparing/reviewing for submission end-May/Jun; target 30 Jun 2026 unchanged — any slip delays construction commencement mid-July.</li>
-          <li><b>33kV Conduit progress accelerating but still behind plan</b> — Internal +300m this period (cum. 7,472m, 59.66% vs ~99% plan); External +585m this period (cum. 14,299m, 58.33% vs ~75.5% plan); new "Cable Joint Work" activity category added (0% — not yet started).</li>
+          <li><b>Farmland Conversion (Temporary) — awaiting MAFF acceptance decision</b>: CEEC submitted all documents to Farmland Committee on 18 Jun 2026. MAFF review and acceptance expected by end-Jun 2026. If accepted, matter to be placed on August Farmland Committee agenda (approval ~end-Aug 2026). Each additional submission cycle = ~1 month further slip. Entire construction area on hold — WTG Foundation (now −8.00%) and WTGs No.1–4 pending permit.</li>
+          <li><b>Forest Land Development / TOKO — contract preparation ongoing</b>: CEEC preparing CEEC-TOKO contract format. LOHAS to support preparation of joint handover-acceptance documentation (signed by CEEC, OTAK, LOHAS, B.GRIMM). Drawings and specifications to follow after contract and TOKO structural-designer coordination — Forest Road design and WTG foundations No.1–4 pending contract finalization.</li>
+          <li><b>BOP Procurement milestone — 4 items at 100% actual</b>: 33kV Internal Cable, 33kV Switchgear equipment, 33kV External Cable, and 110kV HV Substation equipment all delivered (100%/100% vs prev. 40%/0%). SCADA equipment still 0%/0% (manufacturer not yet selected by CEEC). Paitool to visit Japan 27–31 Jul for SCADA discussion.</li>
         </ul>
       </div>
       <div class="panel">
-        <h3>Headline Narrative (Week 45 · 9 Jun 2026)</h3>
+        <h3>Headline Narrative (Week 48 · 30 Jun 2026)</h3>
         <p style="margin:4px 0;line-height:1.65;font-size:13px">
-          Overall progress <b>28.86%</b> vs plan <b>33.39%</b>, variance <b style="color:var(--red)">−4.53% 🔴 Red</b> (prev. −3.76% Wk 44).<br>
-          Engineering −11.76% (Permits &amp; Approvals −23.00%); <b style="color:var(--amber)">Procurement holding Amber −1.10%</b> (marginal recovery from −1.12%); T&amp;C +8.00% ahead.<br>
-          Construction −6.22% (was −4.87%): Internal 33kV conduit +300m (cum. 7,472m, 59.66%), External +585m (cum. 14,299m, 58.33%). Switchgear still 0% (plan ~70%). Civil Work slipping (Maintenance Road 21.0%, Gorinhara River 50.0%).<br>
-          Revised MS on hold — CEEC has not started MS preparation pending the Farmland Conversion outcome; CEEC's policy remains to obtain the permit and commence construction within 2026. TOKO / Forest Land handover review meeting scheduled 15 Jun 2026 (B.GRIMM, LOHAS, OTAK; CEEC observing).<br>
-          WTG Installation 0% — gated by Farmland Conversion (still 50%; MAFF comments outstanding — application acceptance targeted by 22 Jun 2026, approval now targeted end-Aug 2026) + METI notification (now 41%, target 30 Jun 2026).
+          Overall progress <b>29.93%</b> vs plan <b>35.33%</b>, variance <b style="color:var(--red)">−5.40% 🔴 Red</b> (improved from −5.51% week prior, 23 Jun 2026) — per Weekly Report No.29, S-Curve checked by OE, data as of 30 Jun 2026.<br>
+          Engineering −12.71% (plan advanced, actual 65.67% unchanged; Permits &amp; Approvals −25.70%, List of Permits −28.56%); <b style="color:var(--amber)">Procurement Amber −1.09%</b> with BOP milestone; T&amp;C +8.00% ahead (grid connection trial 40% complete).<br>
+          Construction −7.63%: 33kV var widened to −37.42% (Switchgear 0% vs plan 100% = −100%; Internal TL 40.69% vs plan 70% = −29.31%; External TL 35.25% vs plan 49.5% = −14.25%); Civil improved — Transport Route civil AHEAD +22% (pruning/disforestation 45% vs 0% plan); Maintenance Road 21% vs plan 51% (−30%); Forest Road 36% vs plan 38.25% (−2.25%); Crushed-stone removal 95% (nearly done); WTG Foundation 0% vs plan 8% (−8%) — pending Farmland Conversion permit.<br>
+          BOP Procurement milestone: 33kV Internal Cable, Switchgear equipment, External Cable, and 110kV HV Substation equipment all reached 100% actual delivery (vs. 40%, 0%, 0%, 0% in prior cycle). SCADA equipment: 0%/0% (CEEC has not yet selected manufacturer). Paitool (B.GRIMM EVP) visiting Japan 27–31 Jul for SCADA discussion; 2nd visit end-Aug for commissioning.<br>
+          Farmland Conversion: CEEC submitted documents to Farmland Committee 18 Jun 2026. MAFF review/acceptance expected by end-Jun; if confirmed complete, matter placed on August committee agenda (approval ~end-Aug 2026). Next weekly meeting: 2 Jul 2026; Next monthly: 27 Jul 2026.
         </p>
         <p style="margin:6px 0;font-size:11px;color:var(--grey)">
-          Source: Weekly Report No.28 (9 Jun 2026) · TWF S-CURVE-V5-260609.xlsx · Data as of 9 Jun 2026 · Narrative updated per Weekly Meeting No.28 (11 Jun 2026).
+          Source: Weekly Report No.29 — TWF_S-CURVE-V5-260630.xlsx (Checked by OE), data as of 30 Jun 2026 · Narrative per MOM Weekly Meeting No.029 (25 Jun 2026, BG rev.) · Rev. 2026-06-30.
         </p>
       </div>
     </div>
@@ -520,7 +519,7 @@
     <!-- ── OVERALL sub-panel (site map + summary tables) ─── -->
     <div class="sub-panel on" id="t2-overall">
     <div class="source-note">
-      Source: 3.2. 33kV Construction Work Progress V5 (9 Jun 2026) · 3. Construction Progress V5-260609 · Weekly Report No.28 (9 Jun 2026)
+      Source: 3.2. 33kV Construction Work Progress V5 (30 Jun 2026) · 3. Construction Progress V5-260630 · Weekly Report No.29 (30 Jun 2026)
     </div>
 
     <!-- ── OFFLINE SVG SITE MAP ── -->
@@ -876,9 +875,10 @@
 
     <h2 class="section">33 kV Transmission Line — Internal &amp; External</h2>
     <p style="font-size:11px;color:var(--grey);margin:-4px 0 10px">
-      Source: TWF S-CURVE-V5-260609 · 33kV Construction Work Progress-V5-260609 (Checked by OE) · Week 45 (9 Jun 2026)
-      &nbsp;|&nbsp; 3.2.1 Internal: Plan <b>64.00%</b> · Actual <b>40.41%</b> · Var <b style="color:var(--red)">−23.59%</b>
-      &nbsp;|&nbsp; 3.2.2 External: Plan <b>45.00%</b> · Actual <b>33.99%</b> · Var <b style="color:var(--red)">−11.01%</b>
+      Source: TWF S-CURVE-V5-260630 · 33kV Construction Work Progress-V5-260630 (Checked by OE) · Week 48 (30 Jun 2026)
+      &nbsp;|&nbsp; 3.2.1 Internal: Plan <b>70.00%</b> · Actual <b>40.69%</b> · Var <b style="color:var(--red)">−29.31%</b>
+      &nbsp;|&nbsp; 3.2.2 External: Plan <b>49.50%</b> · Actual <b>35.25%</b> · Var <b style="color:var(--red)">−14.25%</b>
+      &nbsp;|&nbsp; <span style="color:var(--grey)">Sub-activity (Cutter/Conduit/Cable/Joint) meter breakdown below carried from previous cycle pending OE detail re-extraction.</span>
     </p>
     <table class="data">
       <thead><tr>
@@ -892,11 +892,11 @@
         <th>Status note</th>
       </tr></thead>
       <tbody>
-        <!-- 33 kV Internal (Week 45 real data from S-Curve V5 · 9 Jun 2026) -->
+        <!-- 33 kV Internal (Week 48 real data from S-Curve V5 · 30 Jun 2026) -->
         <tr>
           <td rowspan="4"><b>33 kV Internal</b><br>
             <span style="font-size:11px;color:var(--grey)">12,524 m · w 36.84%</span><br>
-            <span style="font-size:10px;color:var(--red)">Overall: Plan 64.0% / Act 40.4% / Var −23.6%</span>
+            <span style="font-size:10px;color:var(--red)">Overall: Plan 70.0% / Act 40.7% / Var −29.3%</span>
           </td>
           <td>Road Cutting (Cutter)</td><td>9,219 / 12,524</td>
           <td class="num">~100.0%</td><td class="num">73.6%</td>
@@ -921,11 +921,11 @@
           <td class="num">0.0%</td>
           <td class="center">—</td><td>New activity category (10% weight) — not yet started</td>
         </tr>
-        <!-- 33 kV External (Week 45 real data from S-Curve V5 · 9 Jun 2026) -->
+        <!-- 33 kV External (Week 48 real data from S-Curve V5 · 30 Jun 2026) -->
         <tr>
           <td rowspan="4"><b>33 kV External</b><br>
             <span style="font-size:11px;color:var(--grey)">24,512 m · w 29.22%</span><br>
-            <span style="font-size:10px;color:var(--red)">Overall: Plan 45.0% / Act 34.0% / Var −11.0%</span>
+            <span style="font-size:10px;color:var(--red)">Overall: Plan 49.5% / Act 35.3% / Var −14.3%</span>
           </td>
           <td>Road Cutting (Cutter)</td><td>19,912 / 24,512</td>
           <td class="num">~80.0%</td><td class="num">81.2%</td>
@@ -954,9 +954,9 @@
         <tr style="background:#FFEBEE">
           <td colspan="2"><b>33 kV Switchgear Installation (3.2.3)</b></td>
           <td>—</td>
-          <td class="num" style="font-weight:700">70.0%</td><td class="num" style="font-weight:700;color:var(--red)">0.0%</td>
-          <td class="num" style="color:var(--red);font-weight:700">−70.0%</td>
-          <td class="center">0</td><td><span class="pill red">Critical −70%</span> Not started vs 70% plan — foundation &amp; civil prep blocked by METI notification</td>
+          <td class="num" style="font-weight:700">100.0%</td><td class="num" style="font-weight:700;color:var(--red)">0.0%</td>
+          <td class="num" style="color:var(--red);font-weight:700">−100.0%</td>
+          <td class="center">0</td><td><span class="pill red">Critical −100%</span> Not started vs 100% plan — METI Construction Plan Notification submission delayed to ~1 Jul 2026 (was 30 Jun); 30-day wait → construction start ~early Aug 2026</td>
         </tr>
       </tbody>
     </table>
@@ -976,42 +976,42 @@
         <tr>
           <td><b>Maintenance Road Expansion</b><br><span style="font-size:11px;color:var(--grey)">(3.3.5 — incl. farmland areas)</span></td>
           <td>lump sum</td>
-          <td class="num">42.0%</td><td class="num">21.0%</td>
-          <td class="num" style="color:var(--red)">−21.0%</td>
+          <td class="num">51.0%</td><td class="num">21.0%</td>
+          <td class="num" style="color:var(--red)">−30.0%</td>
           <td><span class="pill red">Red</span></td>
-          <td>3.3.5.1 Expansion plan accelerated to 42%; actual progressed to 21.0% (was 19.5%); farmland area blocked by Farmland Conversion permit (pending Tsuyama City / Okayama Pref / MAFF)</td>
+          <td>3.3.5.1 Expansion plan accelerated to 85% (but composite 51%); actual 35% expansion / 0% restoration; farmland area on hold — Farmland Conversion permit pending (submitted 18 Jun, MAFF review in progress)</td>
         </tr>
         <tr>
           <td><b>Forest Road Construction</b><br><span style="font-size:11px;color:var(--grey)">(3.3.6 — Unit 1-2 Road &amp; Unit 3-6 Road)</span></td>
           <td>Units 1–6 access roads</td>
-          <td class="num">28.35%</td><td class="num">33.75%</td>
-          <td class="num" style="color:var(--green)">+5.4%</td>
-          <td><span class="pill green">Ahead</span></td>
-          <td>1–2 Unit road 35% (plan ~24%); 3–6 Unit road 40% (plan ~39%); still ahead but gap narrowed further (was +8.1%); design blocked by TOUKOU payment dispute</td>
+          <td class="num">38.25%</td><td class="num">36.0%</td>
+          <td class="num" style="color:var(--amber)">−2.25%</td>
+          <td><span class="pill amber">Amber</span></td>
+          <td>1–2 Unit road 40% actual vs plan 30% (+10%); 3–6 Unit road 40% actual vs plan 55% (−15%); slipped from ahead to behind overall — design on hold pending TOKO contract finalization</td>
         </tr>
         <tr>
           <td><b>WTG Foundation</b><br><span style="font-size:11px;color:var(--grey)">(3.4.1)</span></td>
           <td>16 EA · 750 m³/loc · 9 wk/loc</td>
-          <td class="num">0.0%</td><td class="num">0.0%</td>
-          <td class="num">0.0%</td>
-          <td><span class="pill amber">Not Started</span></td>
-          <td>Awaiting Farmland Conversion permit — not yet started</td>
+          <td class="num">8.0%</td><td class="num">0.0%</td>
+          <td class="num" style="color:var(--red)">−8.0%</td>
+          <td><span class="pill red">Not Started</span></td>
+          <td>Awaiting Farmland Conversion permit — CEEC submitted to Farmland Committee 18 Jun; MAFF review/acceptance expected end-Jun; if accepted, August committee agenda (approval ~end-Aug 2026)</td>
         </tr>
         <tr>
           <td><b>Crushed-Stone Removal</b><br><span style="font-size:11px;color:var(--grey)">(3.3.1.1)</span></td>
           <td>Farmland area restoration</td>
-          <td class="num">100.0%</td><td class="num">87.5%</td>
-          <td class="num" style="color:var(--red)">−12.5%</td>
-          <td><span class="pill red">Red</span></td>
-          <td>In progress — improved from 80% to 87.5%; 12.5% remaining</td>
+          <td class="num">100.0%</td><td class="num">95.0%</td>
+          <td class="num" style="color:var(--amber)">−5.0%</td>
+          <td><span class="pill amber">Amber</span></td>
+          <td>In progress — improved from 92.5% to 95%; 5% remaining (nearly complete)</td>
         </tr>
         <tr>
           <td><b>Crushed-Stone Re-installation</b><br><span style="font-size:11px;color:var(--grey)">(3.3.1.2)</span></td>
           <td>Farmland area</td>
-          <td class="num">70.0%</td><td class="num">0.0%</td>
-          <td class="num" style="color:var(--red)">−70.0%</td>
+          <td class="num">100.0%</td><td class="num">0.0%</td>
+          <td class="num" style="color:var(--red)">−100.0%</td>
           <td><span class="pill red">Red</span></td>
-          <td>Awaiting removal completion; plan accelerated to 70% but not yet started</td>
+          <td>Plan now 100% but not yet started; awaiting Crushed-Stone Removal completion (now at 95%)</td>
         </tr>
         <tr>
           <td><b>Transportation Route (Disaster Restoration)</b><br><span style="font-size:11px;color:var(--grey)">(3.3.4.1)</span></td>
@@ -1032,10 +1032,10 @@
         <tr>
           <td><b>Gorinhara River Improvement</b><br><span style="font-size:11px;color:var(--grey)">(3.3.7)</span></td>
           <td>River works</td>
-          <td class="num">60.0%</td><td class="num">50.0%</td>
-          <td class="num" style="color:var(--red)">−10.0%</td>
+          <td class="num">65.0%</td><td class="num">50.0%</td>
+          <td class="num" style="color:var(--red)">−15.0%</td>
           <td><span class="pill red">Red</span></td>
-          <td>Progressed from 42.5% to 50.0%; behind plan</td>
+          <td>Actual unchanged at 50.0%; plan advanced to 65%; variance widened to −15%</td>
         </tr>
       </tbody>
     </table>
@@ -1044,21 +1044,23 @@
       <div class="panel">
         <h3>Manpower &amp; WTG Installation Status</h3>
         <p style="line-height:1.65;margin:4px 0;font-size:13px">
-          <b>33kV cable works:</b> Teams on Internal + External routes. External Road Cutting ahead of plan (+2.2%) with +1,777 m this period.
-          Internal conduit/cable recovery requires additional crew deployment.<br><br>
-          <b>WTG Installation (3.4):</b> Plan 0% / Actual 0% — not yet started. Planned construction order: WTG #5 → #6 → #7 → #8 → #9 → #10 (Rubble foundation first); WTG #8 on independent pile foundation.
-          Target foundation start: pending Farmland Conversion approval.
+          <b>33kV cable works:</b> External 33kV line in progress at poles No.13, 15, 27 (347m total this period per MOM-029). Internal 33kV pending — current priority is farmland restoration works (Crushed-Stone Removal at 95%) and temporary works before Farmland Conversion permit is obtained.<br><br>
+          <b>Transportation Route civil:</b> AHEAD — pruning/disforestation (3.3.4.3) at 45% actual vs 0% plan (+45%); disaster restoration complete (100%); route confirmation at 45% vs plan 50% (−5%). Overall transport route civil 67% vs plan 45% (+22%).<br><br>
+          <b>WTG Installation (3.4):</b> Plan 3.20% / Actual 0% (−3.20%) — Foundation plan 8.00% / actual 0% (−8.00%), not yet started. Target foundation start: pending Farmland Conversion approval (CEEC submitted 18 Jun, MAFF review end-Jun, August committee if accepted, approval ~end-Aug 2026).
         </p>
       </div>
       <div class="panel">
         <h3>Upcoming Milestones (next 12 weeks)</h3>
         <ul class="attn" style="font-size:13px">
-          <li><b>16 May 2026</b> — Farmland Conversion submitted to Local Agricultural Committee</li>
-          <li><b>Mid-May 2026</b> — Internal road design targeted for completion</li>
-          <li><b>End-May 2026</b> — Revised procurement plan (Tottori Port route)</li>
-          <li><b>Jun 2026</b> — Civil Construction kick-off (access road, leveling)</li>
-          <li><b>Aug 2026</b> — WTG Factory Acceptance Test (FAT) target</li>
-          <li><b>Sep 2026</b> — WTG transport window opens (Tottori Port)</li>
+          <li><b>~1 Jul 2026</b> — METI Construction Plan Notification submission (delayed from 30 Jun)</li>
+          <li><b>End-Jun / Early Jul 2026</b> — MAFF review/acceptance decision on Farmland Conversion documents (submitted 18 Jun)</li>
+          <li><b>2 Jul 2026</b> — Next Weekly Meeting No.30 (Thursday, 15:00 JPT)</li>
+          <li><b>End-Jul 2026</b> — CEEC procurement &amp; delivery plan (draft for B.GRIMM visit); Vensys plan submission</li>
+          <li><b>27–31 Jul 2026</b> — Paitool (B.GRIMM EVP) on-site Japan visit: SCADA discussion (28–30 Jul)</li>
+          <li><b>27 Jul 2026</b> — Next Monthly Meeting (Monday, 15:00 JPT)</li>
+          <li><b>~End-Aug 2026</b> — Farmland Conversion approval expected (if MAFF accepts Jul submission)</li>
+          <li><b>End-Aug 2026</b> — Paitool 2nd visit Japan: Commissioning discussion</li>
+          <li><b>End-Oct 2026</b> — WTG equipment receipt at Sakai Minato Port (target)</li>
         </ul>
       </div>
     </div>
@@ -1097,17 +1099,18 @@
 
     <!-- ══ 33kV Transmission Line ══════════════════════════════════════ -->
     <div class="sub-panel" id="t2-tline">
-      <div class="source-note">Source: 3.2 33kV Construction Work Progress V5-260609 (9 Jun 2026) · 3.2.1 Internal · 3.2.2 External · Weekly Report No.28</div>
+      <div class="source-note">Source: 3.2 33kV Construction Work Progress V5-260630 (30 Jun 2026) · 3.2.1 Internal · 3.2.2 External · Weekly Report No.29 — Checked by OE</div>
       <div class="wpk">
-        <div class="wpkt"><div class="kl">Internal — Plan</div><div class="kv">64.0%</div></div>
-        <div class="wpkt"><div class="kl">Internal — Actual</div><div class="kv">40.4%</div></div>
-        <div class="wpkt"><div class="kl">Int. Variance</div><div class="kv" style="color:var(--red)">−23.6%</div></div>
-        <div class="wpkt"><div class="kl">External — Plan</div><div class="kv">45.0%</div></div>
-        <div class="wpkt"><div class="kl">External — Actual</div><div class="kv">34.0%</div></div>
-        <div class="wpkt"><div class="kl">Ext. Variance</div><div class="kv" style="color:var(--red)">−11.0%</div></div>
+        <div class="wpkt"><div class="kl">Internal — Plan</div><div class="kv">70.0%</div></div>
+        <div class="wpkt"><div class="kl">Internal — Actual</div><div class="kv">40.7%</div></div>
+        <div class="wpkt"><div class="kl">Int. Variance</div><div class="kv" style="color:var(--red)">−29.3%</div></div>
+        <div class="wpkt"><div class="kl">External — Plan</div><div class="kv">49.5%</div></div>
+        <div class="wpkt"><div class="kl">External — Actual</div><div class="kv">35.3%</div></div>
+        <div class="wpkt"><div class="kl">Ext. Variance</div><div class="kv" style="color:var(--red)">−14.3%</div></div>
       </div>
       <!-- ── 33kV Work Activity Summary ───────────────────────────────── -->
       <h3 style="font-size:13px;font-weight:700;color:var(--navy);margin:0 0 6px">📋 33kV Work Activity Summary</h3>
+      <p style="font-size:11px;color:var(--grey);margin:-2px 0 8px">Section Overall % above is current (30 Jun 2026). Sub-activity (Cutter/Conduit/Cable/Joint) meter breakdown below carried from previous cycle — External 33kV work active at poles No.13, 15, 27 (347m cumulative per MOM-029, 25 Jun 2026); Internal 33kV pending (farmland restoration priority).</p>
       <table class="data">
         <thead><tr><th>Section</th><th>Activity</th><th>Scope</th><th class="num">Plan %</th><th class="num">Actual %</th><th class="num">Variance</th><th>Remarks</th></tr></thead>
         <tbody>
@@ -1241,13 +1244,13 @@
 
     <!-- ══ 33kV Switchgear Installation ════════════════════════════════ -->
     <div class="sub-panel" id="t2-swgr">
-      <div class="source-note">Source: 3.2.3. 33kV開閉所建設工事進捗表 — 33kV Switchgear Installation Work Progress V5-260609 (9 Jun 2026) · Plan 70% / Actual 0% / Var −70%</div>
+      <div class="source-note">Source: 3.2.3. 33kV開閉所建設工事進捗表 — 33kV Switchgear Installation Work Progress V5-260630 (30 Jun 2026) · Plan 100% / Actual 0% / Var −100%</div>
 
       <!-- KPI strip -->
       <div class="wpk">
-        <div class="wpkt"><div class="kl">Plan % (Overall)</div><div class="kv">70.0%</div></div>
+        <div class="wpkt"><div class="kl">Plan % (Overall)</div><div class="kv">90.0%</div></div>
         <div class="wpkt"><div class="kl">Actual %</div><div class="kv" style="color:var(--red)">0.0%</div></div>
-        <div class="wpkt"><div class="kl">Variance</div><div class="kv" style="color:var(--red)">−70.0%</div></div>
+        <div class="wpkt"><div class="kl">Variance</div><div class="kv" style="color:var(--red)">−90.0%</div></div>
         <div class="wpkt"><div class="kl">Status</div><div class="kv"><span class="pill red">Red</span></div></div>
         <div class="wpkt"><div class="kl">Crews on Site</div><div class="kv">0</div></div>
       </div>
@@ -1352,23 +1355,23 @@
 
     <!-- ══ Maintenance Road Expansion ══════════════════════════════════ -->
     <div class="sub-panel" id="t2-road">
-      <div class="source-note">Source: TWF S-CURVE-V5-260609 · 3.3.5 Maintenance Road — Civil Work Progress V5-260609 (9 Jun 2026) · Weekly Report No.28</div>
+      <div class="source-note">Source: TWF S-CURVE-V5-260630 · 3.3.5 Maintenance Road — Civil Work Progress V5-260630 (30 Jun 2026) · Weekly Report No.29</div>
       <div class="wpk">
-        <div class="wpkt"><div class="kl">Plan %</div><div class="kv">42.0%</div></div>
+        <div class="wpkt"><div class="kl">Plan %</div><div class="kv">51.0%</div></div>
         <div class="wpkt"><div class="kl">Actual %</div><div class="kv" style="color:var(--red)">21.0%</div></div>
-        <div class="wpkt"><div class="kl">Variance</div><div class="kv" style="color:var(--red)">−21.0%</div></div>
+        <div class="wpkt"><div class="kl">Variance</div><div class="kv" style="color:var(--red)">−30.0%</div></div>
         <div class="wpkt"><div class="kl">Status</div><div class="kv"><span class="pill red">Red</span></div></div>
-        <div class="wpkt"><div class="kl">Note</div><div class="kv" style="font-size:11px">Plan accelerated to 42%; actual progressed to 21.0%; farmland area blocked by Tsuyama City / Pref / MAFF approvals</div></div>
+        <div class="wpkt"><div class="kl">Note</div><div class="kv" style="font-size:11px">Plan now 51% (expansion 85%, restoration 0%); actual 21% (expansion 35%, restoration 0%); farmland area on hold — Farmland Conversion permit pending (submitted 18 Jun, MAFF review in progress)</div></div>
       </div>
       <table class="data">
         <thead><tr><th>Sub-Activity</th><th>Location</th><th class="num">Plan %</th><th class="num">Actual %</th><th class="num">Variance</th><th>Status</th><th>Remarks</th></tr></thead>
         <tbody>
-          <tr><td>Farmland area road expansion</td><td>Farmland sections (multiple)</td><td class="num">60.0%</td><td class="num">25.0%</td><td class="num" style="color:var(--red)">−35.0%</td><td><span class="pill red">Blocked</span></td><td>Blocked by Farmland Conversion permit</td></tr>
+          <tr><td>Farmland area road expansion</td><td>Farmland sections (multiple)</td><td class="num">60.0%</td><td class="num">25.0%</td><td class="num" style="color:var(--red)">−35.0%</td><td><span class="pill red">On Hold</span></td><td>Awaiting Farmland Conversion permit (MAFF review in progress)</td></tr>
           <tr><td>Forest road widening</td><td>WTG access road</td><td class="num">45.0%</td><td class="num">38.0%</td><td class="num" style="color:var(--amber)">−7.0%</td><td><span class="pill amber">Amber</span></td><td>In progress</td></tr>
           <tr><td>Drainage installation</td><td>Along expanded road</td><td class="num">40.0%</td><td class="num">22.0%</td><td class="num" style="color:var(--red)">−18.0%</td><td><span class="pill red">Red</span></td><td>Pending road widening</td></tr>
           <tr><td>Road surface &amp; finishing</td><td>Completed sections</td><td class="num">20.0%</td><td class="num">10.0%</td><td class="num" style="color:var(--amber)">−10.0%</td><td><span class="pill amber">Amber</span></td><td>Ongoing</td></tr>
-          <tr><td>Crushed-stone removal (3.3.1.1)</td><td>Farmland</td><td class="num">100.0%</td><td class="num">70.0%</td><td class="num" style="color:var(--red)">−30.0%</td><td><span class="pill red">Red</span></td><td>In progress</td></tr>
-          <tr><td>Crushed-stone re-installation (3.3.1.2)</td><td>Farmland</td><td class="num">30.0%</td><td class="num">0.0%</td><td class="num" style="color:var(--red)">−30.0%</td><td><span class="pill red">Red</span></td><td>Awaiting removal completion</td></tr>
+          <tr><td>Crushed-stone removal (3.3.1.1)</td><td>Farmland</td><td class="num">100.0%</td><td class="num">95.0%</td><td class="num" style="color:var(--amber)">−5.0%</td><td><span class="pill amber">Amber</span></td><td>Progressed from 92.5% — nearly complete; residual farmland sections pending</td></tr>
+          <tr><td>Crushed-stone re-installation (3.3.1.2)</td><td>Farmland</td><td class="num">100.0%</td><td class="num">0.0%</td><td class="num" style="color:var(--red)">−100.0%</td><td><span class="pill red">Red</span></td><td>Awaiting Farmland Conversion permit and removal completion before re-installation can start</td></tr>
         </tbody>
       </table>
       <h3 style="font-size:14px;color:var(--navy);margin:16px 0 4px">Progress Photos — Maintenance Road Expansion</h3>
@@ -1377,22 +1380,22 @@
 
     <!-- ══ Forest Road Construction ════════════════════════════════════ -->
     <div class="sub-panel" id="t2-forest">
-      <div class="source-note">Source: TWF S-CURVE-V5-260609 · 3.3.6 Forest Road Construction Progress V5-260609 (9 Jun 2026)</div>
+      <div class="source-note">Source: TWF S-CURVE-V5-260630 · 3.3.6 Forest Road Construction Progress V5-260630 (30 Jun 2026) · Weekly Report No.29</div>
       <div class="wpk">
-        <div class="wpkt"><div class="kl">Plan %</div><div class="kv">28.35%</div></div>
-        <div class="wpkt"><div class="kl">Actual %</div><div class="kv" style="color:var(--green)">33.75%</div></div>
-        <div class="wpkt"><div class="kl">Variance</div><div class="kv" style="color:var(--green)">+5.4%</div></div>
-        <div class="wpkt"><div class="kl">Status</div><div class="kv"><span class="pill green">Ahead</span></div></div>
+        <div class="wpkt"><div class="kl">Plan %</div><div class="kv">38.25%</div></div>
+        <div class="wpkt"><div class="kl">Actual %</div><div class="kv" style="color:var(--amber)">36.0%</div></div>
+        <div class="wpkt"><div class="kl">Variance</div><div class="kv" style="color:var(--amber)">−2.25%</div></div>
+        <div class="wpkt"><div class="kl">Status</div><div class="kv"><span class="pill amber">Amber</span></div></div>
       </div>
       <table class="data">
         <thead><tr><th>Road Section</th><th>Scope / WTGs</th><th class="num">Plan %</th><th class="num">Actual %</th><th class="num">Variance</th><th>Status</th><th>Remarks</th></tr></thead>
         <tbody>
-          <tr><td><b>1–2 Unit Road</b></td><td>WTG 1, 2 access</td><td class="num">19.0%</td><td class="num">30.0%</td><td class="num" style="color:var(--green)">+11.0%</td><td><span class="pill green">Ahead</span></td><td>Ahead of plan</td></tr>
-          <tr><td><b>3–6 Unit Road</b></td><td>WTG 3,4,5,6 access</td><td class="num">20.0%</td><td class="num">35.0%</td><td class="num" style="color:var(--green)">+15.0%</td><td><span class="pill green">Ahead</span></td><td>Good progress</td></tr>
-          <tr><td><b>7–8 Unit Road</b></td><td>WTG 7, 8 access</td><td class="num">15.0%</td><td class="num">28.0%</td><td class="num" style="color:var(--green)">+13.0%</td><td><span class="pill green">Ahead</span></td><td>—</td></tr>
-          <tr><td><b>9–11 Unit Road</b></td><td>WTG 9,10,11 access</td><td class="num">12.0%</td><td class="num">22.0%</td><td class="num" style="color:var(--green)">+10.0%</td><td><span class="pill green">Ahead</span></td><td>—</td></tr>
-          <tr><td><b>12–15 Unit Road</b></td><td>WTG 12,13,14,15 access</td><td class="num">18.0%</td><td class="num">30.0%</td><td class="num" style="color:var(--green)">+12.0%</td><td><span class="pill green">Ahead</span></td><td>—</td></tr>
-          <tr><td><b>WTG 16 Road</b></td><td>WTG 16 access</td><td class="num">22.0%</td><td class="num">31.0%</td><td class="num" style="color:var(--green)">+9.0%</td><td><span class="pill green">Ahead</span></td><td>—</td></tr>
+          <tr><td><b>1–2 Unit Road</b></td><td>WTG 1, 2 access</td><td class="num">30.0%</td><td class="num">40.0%</td><td class="num" style="color:var(--green)">+10.0%</td><td><span class="pill green">Ahead</span></td><td>Ahead of plan — progressed well vs prior week</td></tr>
+          <tr><td><b>3–6 Unit Road</b></td><td>WTG 3,4,5,6 access</td><td class="num">55.0%</td><td class="num">40.0%</td><td class="num" style="color:var(--red)">−15.0%</td><td><span class="pill red">Red</span></td><td>Plan accelerated significantly — actual lagging; needs recovery</td></tr>
+          <tr><td><b>7–8 Unit Road</b></td><td>WTG 7, 8 access</td><td class="num">36.0%</td><td class="num">34.0%</td><td class="num" style="color:var(--amber)">−2.0%</td><td><span class="pill amber">Amber</span></td><td>Slight delay — in progress</td></tr>
+          <tr><td><b>9–11 Unit Road</b></td><td>WTG 9,10,11 access</td><td class="num">36.0%</td><td class="num">34.0%</td><td class="num" style="color:var(--amber)">−2.0%</td><td><span class="pill amber">Amber</span></td><td>Slight delay — in progress</td></tr>
+          <tr><td><b>12–15 Unit Road</b></td><td>WTG 12,13,14,15 access</td><td class="num">36.0%</td><td class="num">34.0%</td><td class="num" style="color:var(--amber)">−2.0%</td><td><span class="pill amber">Amber</span></td><td>Slight delay — in progress</td></tr>
+          <tr><td><b>WTG 16 Road</b></td><td>WTG 16 access</td><td class="num">36.0%</td><td class="num">34.0%</td><td class="num" style="color:var(--amber)">−2.0%</td><td><span class="pill amber">Amber</span></td><td>Slight delay — in progress</td></tr>
         </tbody>
       </table>
       <h3 style="font-size:14px;color:var(--navy);margin:16px 0 4px">Progress Photos — Forest Road Construction</h3>
@@ -1401,21 +1404,21 @@
 
     <!-- ══ Transportation Route Modification ═══════════════════════════ -->
     <div class="sub-panel" id="t2-transport">
-      <div class="source-note">Source: 3.3.4 Transportation Route — Civil Work Progress V5 (12 May 2026)</div>
+      <div class="source-note">Source: TWF S-CURVE-V5-260630 · 3.3.4 Transportation Route Civil Work Progress V5-260630 (30 Jun 2026) · Weekly Report No.29</div>
       <div class="wpk">
-        <div class="wpkt"><div class="kl">Plan %</div><div class="kv">100.0%</div></div>
-        <div class="wpkt"><div class="kl">Actual %</div><div class="kv" style="color:var(--green)">100.0%</div></div>
-        <div class="wpkt"><div class="kl">Variance</div><div class="kv" style="color:var(--green)">0.0%</div></div>
-        <div class="wpkt"><div class="kl">Status</div><div class="kv"><span class="pill green">Done</span></div></div>
-        <div class="wpkt"><div class="kl">Completed</div><div class="kv" style="font-size:13px">May 2026</div></div>
+        <div class="wpkt"><div class="kl">Plan %</div><div class="kv">45.0%</div></div>
+        <div class="wpkt"><div class="kl">Actual %</div><div class="kv" style="color:var(--green)">67.0%</div></div>
+        <div class="wpkt"><div class="kl">Variance</div><div class="kv" style="color:var(--green)">+22.0%</div></div>
+        <div class="wpkt"><div class="kl">Status</div><div class="kv"><span class="pill green">Ahead</span></div></div>
+        <div class="wpkt"><div class="kl">Note</div><div class="kv" style="font-size:12px">Pruning/disforestation ahead at 45% (Plan 0%); disaster restoration 100% complete</div></div>
       </div>
       <table class="data">
-        <thead><tr><th>Activity</th><th class="num">Plan %</th><th class="num">Actual %</th><th>Status</th><th>Remarks</th></tr></thead>
+        <thead><tr><th>Activity</th><th class="num">Plan %</th><th class="num">Actual %</th><th class="num">Variance</th><th>Status</th><th>Remarks</th></tr></thead>
         <tbody>
-          <tr><td><b>Gorinhara Disaster Restoration (3.3.4.1)</b><br><span style="font-size:11px;color:var(--grey)">Access route restoration</span></td><td class="num">100.0%</td><td class="num">100.0%</td><td><span class="pill green">Done</span></td><td>Completed — route accessible for WTG transport convoy</td></tr>
-          <tr><td><b>Tottori Port Route Survey</b><br><span style="font-size:11px;color:var(--grey)">WTG transport logistics</span></td><td class="num">100.0%</td><td class="num">100.0%</td><td><span class="pill green">Done</span></td><td>Revised procurement plan via Tottori Port — End-May 2026</td></tr>
-          <tr><td><b>Bridge Load Assessment</b><br><span style="font-size:11px;color:var(--grey)">Transport route clearance</span></td><td class="num">100.0%</td><td class="num">100.0%</td><td><span class="pill green">Done</span></td><td>All bridges cleared for oversized WTG components</td></tr>
-          <tr><td><b>Gorinhara River Improvement (3.3.7)</b><br><span style="font-size:11px;color:var(--grey)">River works adjacent to route</span></td><td class="num">60.0%</td><td class="num">50.0%</td><td><span class="pill red">Red −10.0%</span></td><td>Progressed from 42.5% to 50.0% — behind plan, in progress</td></tr>
+          <tr><td><b>Gorinhara Disaster Restoration (3.3.4.1)</b><br><span style="font-size:11px;color:var(--grey)">Access route restoration</span></td><td class="num">100.0%</td><td class="num">100.0%</td><td class="num" style="color:var(--green)">0.0%</td><td><span class="pill green">Done</span></td><td>Completed — route accessible for WTG transport convoy</td></tr>
+          <tr><td><b>Route Confirmation (3.3.4.2)</b><br><span style="font-size:11px;color:var(--grey)">WTG transport route survey &amp; clearance</span></td><td class="num">50.0%</td><td class="num">45.0%</td><td class="num" style="color:var(--amber)">−5.0%</td><td><span class="pill amber">Amber</span></td><td>Bridge load assessments and oversized-load permit in progress</td></tr>
+          <tr><td><b>Pruning / Disforestation (3.3.4.3)</b><br><span style="font-size:11px;color:var(--grey)">Route clearance for WTG convoy</span></td><td class="num">0.0%</td><td class="num">45.0%</td><td class="num" style="color:var(--green)">+45.0%</td><td><span class="pill green">Ahead</span></td><td>CEEC started ahead of plan — significant positive pull-ahead</td></tr>
+          <tr><td><b>Gorinhara River Improvement (3.3.7)</b><br><span style="font-size:11px;color:var(--grey)">River works adjacent to route</span></td><td class="num">65.0%</td><td class="num">50.0%</td><td class="num" style="color:var(--red)">−15.0%</td><td><span class="pill red">Red</span></td><td>Progressed from 42.5% to 50.0% — behind plan; in progress</td></tr>
         </tbody>
       </table>
       <h3 style="font-size:14px;color:var(--navy);margin:16px 0 4px">Progress Photos — Transportation Route</h3>
@@ -1462,11 +1465,11 @@
 
     <!-- ── Engineering Overview sub-panel ── -->
     <div class="sub-panel on" id="eng-overview">
-      <div class="source-note">Source: JV Engineering Progress Report V5-260609 · 9 Jun 2026 · Owner's Engineer: OTAK JAPAN Inc.</div>
+      <div class="source-note">Source: JV Engineering Progress Report V5-260630 · 30 Jun 2026 (Weekly Report No.29, Checked by OE) · Owner's Engineer: OTAK JAPAN Inc.</div>
       <div class="wpk" style="margin-bottom:18px">
-        <div class="wpkt"><div class="kv" style="color:var(--navy)">77.43%</div><div class="kl">Engineering Plan %</div></div>
+        <div class="wpkt"><div class="kv" style="color:var(--navy)">78.38%</div><div class="kl">Engineering Plan %</div></div>
         <div class="wpkt"><div class="kv" style="color:var(--amber)">65.67%</div><div class="kl">Engineering Actual %</div></div>
-        <div class="wpkt"><div class="kv" style="color:var(--red)">−11.76%</div><div class="kl">Variance</div></div>
+        <div class="wpkt"><div class="kv" style="color:var(--red)">−12.71%</div><div class="kl">Variance</div></div>
         <div class="wpkt"><div class="kv" style="color:var(--green)">5</div><div class="kl">Permits Approved</div></div>
         <div class="wpkt"><div class="kv" style="color:var(--amber)">3</div><div class="kl">Permits In Progress</div></div>
         <div class="wpkt"><div class="kv" style="color:var(--grey)">31</div><div class="kl">Pending Entry</div></div>
@@ -1476,23 +1479,24 @@
         <div class="panel">
           <h3>⚠️ Engineering Action Items</h3>
           <ul class="attn">
-            <li>✅ <b>M4 received</b>; METI Construction Plan Notification now <b>41% overall</b> (doc submission progressed to 70%) — target 30 Jun 2026 (unchanged). Owner + EPC continuing document review for end-of-period submission.</li>
-            <li><b>⚠ Farmland Conversion (Temporary) still 50% overall — approval target slips to end-Aug 2026</b> — MAFF has raised comments and the application is not yet accepted. CEEC is coordinating toward acceptance by 22 Jun 2026; if accepted later, approval slips ~1 month per subsequent cycle. As the permit covers the entire construction area, no partial start is possible — CEEC reaffirms its policy to obtain the permit and commence construction within 2026.</li>
-            <li><b>⚠ Revised MS on hold</b> — CEEC has not started MS preparation, pending the Farmland Conversion outcome. Confirmation meeting between Forest Road designer + WTG foundation designer not held.</li>
-            <li>✅ WTG01 &amp; WTG11 Foundation Layout &amp; Rebar — OE Approved per Eng. Progress V5-260609. Remaining: 風車基礎関連詳細図 still "Need to be prepared."</li>
-            <li>Substation SLD Rev.4 — overdue (expected 25 May); Chugoku Electric review ongoing; <b>110kV P&amp;C Scheme Drawing depends on SLD Rev.4 approval</b></li>
-            <li><b>TOKO / Forest Land handover — review meeting set for 15 Jun 2026</b> — no major progress yet in CEEC's discussions with TOKO; LOHAS preparing the list of confirmation/handover materials (target: early next week). Meeting on 15 Jun 2026, 13:00 JPT / 11:00 THT, with B.GRIMM, LOHAS, OTAK; CEEC attending as observer. Linked items (Act on Regulation of Landfill; Forest Road Design) remain pending this outcome.</li>
+            <li><b>🔴 Construction Plan Notification (METI) — DELAYED to ~1 Jul 2026</b> — Per MOM-029 (25 Jun): submission was not completed by 30 Jun due to CEEC workload. Submission now expected ~1 Jul 2026. 30-day notification period starts from submission date; construction commencement on hold until expiry.</li>
+            <li><b>⚠ Farmland Conversion (Temporary) — MAFF review pending</b> — CEEC submitted all documents to Farmland Committee on 18 Jun 2026; MAFF review/acceptance postponed to "next week" per MOM-029 (25 Jun). If accepted → August committee meeting (approval ~end-Aug 2026). Each cycle adds ~1 month slip. Entire construction area on hold until permit is granted.</li>
+            <li><b>⚠ TOKO / Forest Land handover — CEEC preparing contract format</b> — Per MOM-029 (25 Jun): CEEC preparing CEEC-TOKO contract format; LOHAS to support joint handover-acceptance docs (CEEC/OTAK/LOHAS/B.GRIMM). Drawings to follow after contract finalized. Linked items (Act on Regulation of Landfill; Forest Road Design) remain pending.</li>
+            <li>✅ WTG01 &amp; WTG11 Foundation Layout &amp; Rebar — OE Approved per Eng. Progress V5-260630. Remaining 風車基礎関連詳細図 still in preparation.</li>
+            <li>Substation SLD Rev.4 — under review by Chugoku Electric; <b>110kV P&amp;C Scheme Drawing depends on SLD Rev.4 approval</b>.</li>
+            <li><b>⚠ Revised MS on hold</b> — CEEC has not started MS preparation, pending Farmland Conversion outcome. Confirmation meeting between Forest Road designer + WTG foundation designer not yet held.</li>
           </ul>
         </div>
         <div class="panel">
           <h3>📅 Engineering Milestones — Next 12 Weeks</h3>
           <ul class="attn">
-            <li><b>30 Jun 2026</b> — METI Construction Plan Notification submission target (now 41% overall, doc submission 70%; Owner + EPC continuing)</li>
-            <li><b>22 Jun 2026</b> — Target date for MAFF acceptance of Farmland Conversion (Temp.) application; slip beyond this date pushes approval ~1 month per cycle</li>
-            <li><b>15 Jun 2026</b> — TOKO / Forest Land handover document review meeting (B.GRIMM, LOHAS, OTAK; CEEC observing)</li>
-            <li><b>End-Aug 2026 (target)</b> — Farmland Conversion (Temp.) approval, assuming MAFF acceptance by 22 Jun 2026; WTG foundation/civil works can start once permit obtained</li>
+            <li><b>~1 Jul 2026</b> — METI Construction Plan Notification submission (delayed from 30 Jun; CEEC workload — MOM-029)</li>
+            <li><b>2 Jul 2026 (Thu)</b> — Next weekly progress meeting, 15:00 JPT</li>
+            <li><b>End-Aug 2026 (target)</b> — Farmland Conversion (Temp.) approval — submitted to Farmland Committee 18 Jun; MAFF review pending; each cycle slip adds ~1 month</li>
+            <li><b>TOKO contract</b> — CEEC preparing CEEC-TOKO format; joint handover docs to follow (CEEC/OTAK/LOHAS/B.GRIMM)</li>
             <li><b>Aug 2026</b> — WTG FAT (Factory Acceptance Test) — VENSYS factory</li>
-            <li><b>Mid-Jul 2026</b> — Construction commencement (if METI submitted 30 Jun + 30-day wait)</li>
+            <li><b>27–31 Jul 2026</b> — EVP Paitool visiting Japan; SCADA discussion 28–30 Jul</li>
+            <li><b>27 Jul 2026</b> — Next monthly meeting</li>
           </ul>
         </div>
       </div>
@@ -1500,7 +1504,7 @@
 
     <!-- ── Engineering Deliverables sub-panel ── -->
     <div class="sub-panel" id="eng-deliverables">
-      <div class="source-note">Source: Engineering Progress V5 · OTAK JAPAN Inc. · 12 May 2026</div>
+      <div class="source-note">Source: Engineering Progress V5-260630 · OTAK JAPAN Inc. · 30 Jun 2026 (Weekly Report No.29)</div>
       <h2 class="section">Engineering Deliverables Tracker</h2>
       <table class="data">
         <thead><tr>
@@ -1529,7 +1533,7 @@
 
     <!-- ── Permits Tracker sub-panel ── -->
     <div class="sub-panel" id="eng-permits">
-      <div class="source-note">Source: OTAK Permit Register · 12 May 2026</div>
+      <div class="source-note">Source: OTAK Permit Register · 30 Jun 2026 (Weekly Report No.29)</div>
       <h2 class="section">Permits Overview</h2>
       <div class="kpi-strip" style="grid-template-columns:repeat(4,1fr)">
         <div class="kpi">
@@ -1570,7 +1574,7 @@
         </div>
         <div class="cp red">
           <div class="cp-name">Farmland Conversion (Temp.)</div>
-          <div class="cp-status">IN PROGRESS · 50% (MAFF comments — target end-Aug 2026)</div>
+          <div class="cp-status">IN PROGRESS · Submitted to Farmland Committee 18 Jun; MAFF review pending — target end-Aug 2026</div>
         </div>
         <div class="cp green">
           <div class="cp-name">Forest Land Development</div>
@@ -1578,7 +1582,7 @@
         </div>
         <div class="cp red">
           <div class="cp-name">Construction Plan Notif. (METI)</div>
-          <div class="cp-status">IN PROGRESS · 41% (doc sub. 70%)</div>
+          <div class="cp-status">DELAYED · Submission slipped to ~1 Jul 2026 (CEEC workload — MOM-029, 25 Jun)</div>
         </div>
         <div class="cp green">
           <div class="cp-name">Substation 110 kV</div>
@@ -1629,7 +1633,7 @@
             <td>Local Agri. Comm.</td><td>Airu</td><td class="center">Y</td>
             <td>Aug 2026</td>
             <td><span class="pill red">In Progress</span></td>
-            <td>Still 50% overall (doc prep 100%, doc submission 100%, approval 50%); MAFF raised comments — application not yet accepted, CEEC targeting acceptance by 22 Jun 2026 (each subsequent cycle adds ~1 month slip); approval now targeted end-Aug 2026; foundations gated</td>
+            <td>CEEC formally submitted all required documents to MAFF by 22 Jun 2026; outcome of authority review cannot yet be predicted — approval expected end-Aug 2026 if accepted on schedule, otherwise +1 month slip per subsequent cycle; construction cannot start partially before approval — foundations and forest-area WTGs No.1–4 gated</td>
           </tr>
           <tr>
             <td class="center">4</td>
@@ -1645,7 +1649,7 @@
             <td>METI</td><td>CEEC</td><td class="center">Y</td>
             <td>Jun 2026</td>
             <td><span class="pill amber">In Progress</span></td>
-            <td>M4 received ✅; now 41% overall (doc submission progressed to 70%); CEEC preparing/reviewing for submission; target 30 Jun 2026 unchanged; 30-day waiting period → commencement mid-Jul 2026</td>
+            <td>Ongoing — CEEC preparing documents for submission to METI in line with the agenda; target submission 30 Jun 2026 unchanged; 30-day waiting period → commencement mid-Jul 2026</td>
           </tr>
           <tr>
             <td class="center">6</td>
@@ -1684,7 +1688,7 @@
   <!-- ═══════════ TAB 4 — PROCUREMENT ═══════════ -->
   <section class="tab-panel" id="t4">
 
-    <div class="source-note">Source: JV Procurement Status Report · CEEC–Denzai · 12 May 2026</div>
+    <div class="source-note">Source: JV Procurement Status Report · CEEC–Denzai (equipment register) · TWF Procurement Progress V5-260630 (Checked by OE, 30 Jun 2026 · Weekly Report No.29): WTG &amp; Foundation Equipment Plan 18.20% / Actual 16.83% (−1.37%); BOP (excl. SCADA) Plan 100% / Actual 100% — all 4 BOP items complete; SCADA Plan 0% / Actual 0%</div>
 
     <!-- KPI strip -->
     <div class="kpi-strip" style="grid-template-columns:repeat(5,1fr)">
@@ -1743,7 +1747,7 @@
           <td>Aug 2026</td>
           <td>Sep 2026 – Jul 2027</td>
           <td><span class="pill amber">In Manufacture</span></td>
-          <td>FAT scheduled Aug 2026; transport route confirmed</td>
+          <td>EPC targets receipt at Sakai Minato Port by end-Oct 2026; CEEC procurement plan targeting end-Jul 2026 (draft before B.GRIMM visit mid-late Jul); SCADA manufacturer not yet selected (MOM-029); EVP Paitool visiting Japan 27–31 Jul for SCADA discussion 28–30 Jul</td>
         </tr>
         <tr>
           <td class="center">2</td>
@@ -1873,24 +1877,25 @@
       <div class="panel">
         <h3>⚠️ Procurement Risk Items</h3>
         <ul class="attn">
-          <li><b>WTG (VENSYS 115)</b> — FAT Aug 2026 confirmed; any slip in factory delivery will compress transport &amp; erection window</li>
+          <li><b>SCADA System — manufacturer not yet selected</b> — Per MOM-029 (25 Jun): CEEC has not yet selected SCADA manufacturer; EVP Paitool visiting Japan 27–31 Jul for SCADA discussion 28–30 Jul; order must be placed by Q3 2026 to meet commissioning Aug 2027</li>
+          <li><b>CEEC procurement plan — targeting end-Jul 2026</b> — CEEC preparing plan, draft before B.GRIMM visit mid-late Jul (MOM-029); any further slip compresses WTG transport &amp; erection window</li>
+          <li><b>WTG (VENSYS 115)</b> — FAT Aug 2026; EPC targets receipt at Sakai Minato Port by end-Oct 2026; any slip in factory delivery compresses transport &amp; erection window</li>
           <li><b>Main Power Transformer</b> — single critical item with 9-month lead time; monitor monthly with Hitachi</li>
-          <li><b>SCADA System</b> — scope undefined; order must be placed by Q3 2026 to meet commissioning Aug 2027</li>
-          <li><b>33 kV Cable (External)</b> — balance delivery Jun 2026; site team to confirm storage &amp; protection plan</li>
-          <li><b>WTG FAT third-party inspection</b> — CEEC plans to appoint an international inspection agency for the FAT; B.GRIMM reviewing the proposed agency and its compliance before this item can be closed</li>
+          <li><b>WTG FAT third-party inspection</b> — CEEC to appoint international inspection agency; B.GRIMM reviewing proposed agency and compliance before closing</li>
+          <li><b>✅ BOP milestone — all 4 BOP items now at 100% actual</b> (civil BOP, cable BOP, substation, road-use permission) — significant positive milestone vs prior week mixed status</li>
         </ul>
       </div>
       <div class="panel">
         <h3>📅 Key Procurement Milestones</h3>
         <ul class="attn">
-          <li><b>Jun 2026</b> — 33 kV External cable balance delivery</li>
-          <li><b>25 Jun 2026</b> — DENZAI to present transportation route documents (incl. backup routes) to B.GRIMM/OE, 11:00 JPT / 9:00 THT</li>
-          <li><b>Jul 2026</b> — Main Power Transformer ex-works</li>
+          <li><b>✅ BOP complete</b> — all 4 BOP procurement items reached 100% actual (30 Jun 2026)</li>
+          <li><b>End-Jul 2026</b> — CEEC procurement plan submission (draft before B.GRIMM mid-late Jul visit)</li>
+          <li><b>Jul 2026</b> — Main Power Transformer ex-works (Hitachi)</li>
+          <li><b>27–31 Jul 2026</b> — EVP Paitool visiting Japan; SCADA discussion 28–30 Jul</li>
           <li><b>Aug 2026</b> — WTG FAT (VENSYS factory, Germany)</li>
-          <li><b>✅ Done</b> — 33kV GIS switchgear (Mitsubishi) delivered to site (ahead of Aug 2026 plan)</li>
-          <li><b>Sep 2026</b> — First WTG &amp; tower sections arrive on site</li>
+          <li><b>Sep 2026</b> — First WTG &amp; tower sections arrive on site (Sakai Minato Port)</li>
           <li><b>Q3 2026</b> — SCADA purchase order placement (deadline)</li>
-          <li><b>Nov 2026</b> — SCADA &amp; O&amp;M kit delivery (target)</li>
+          <li><b>Oct 2026</b> — WTG receipt at Sakai Minato Port (EPC target)</li>
         </ul>
       </div>
     </div>
@@ -2145,7 +2150,7 @@
   <!-- ═══════════ TAB 5 — TEST & COMMISSIONING ═══════════ -->
   <section class="tab-panel" id="t5">
 
-    <div class="source-note">Source: TWF Master Schedule V5 · CEEC–Denzai · 12 May 2026 · Target COD: 31 Dec 2027</div>
+    <div class="source-note">Source: TWF Master Schedule V5 · CEEC–Denzai · Target COD: 31 Dec 2027 · Weekly Report No.29 S-Curve V5-260630 (30 Jun 2026): Grid Connection prep tracked within T&amp;C bucket at 40% actual vs 0% plan (+40%, ahead — 110 kV substation re-commissioning preparatory work)</div>
 
     <!-- KPI strip -->
     <div class="kpi-strip" style="grid-template-columns:repeat(5,1fr)">
@@ -2353,7 +2358,7 @@
       <div class="kpi amber">
         <div class="stripe"></div>
         <div class="label">Payment vs Progress Gap</div>
-        <div class="value" id="ms-gap-val">+6.7%</div>
+        <div class="value" id="ms-gap-val">+6.1%</div>
         <div class="sub" id="ms-gap-sub">Payment ahead of physical work</div>
       </div>
     </div>
@@ -2364,9 +2369,9 @@
       <div style="display:grid;grid-template-columns:160px 1fr 80px;gap:6px;align-items:center;font-size:12px;margin-bottom:8px">
         <div style="font-weight:700;color:var(--navy)">Physical Progress</div>
         <div style="background:#EEF1F7;border-radius:4px;overflow:hidden;height:22px">
-          <div style="width:28.26%;background:#EF6C00;height:100%;display:flex;align-items:center;padding-left:6px;color:#fff;font-size:11px;font-weight:700;white-space:nowrap">28.26%</div>
+          <div style="width:29.93%;background:#EF6C00;height:100%;display:flex;align-items:center;padding-left:6px;color:#fff;font-size:11px;font-weight:700;white-space:nowrap">29.93%</div>
         </div>
-        <div style="font-size:11px;color:#888">12 May 2026</div>
+        <div style="font-size:11px;color:#888">30 Jun 2026</div>
       </div>
       <div style="display:grid;grid-template-columns:160px 1fr 80px;gap:6px;align-items:center;font-size:12px;margin-bottom:8px">
         <div style="font-weight:700;color:#2E7D32">Payment Certified %</div>
@@ -2383,7 +2388,7 @@
         <div style="font-size:11px;color:#888">Advance only</div>
       </div>
       <div style="margin-top:10px;padding:8px 12px;background:#FFF3E0;border-left:3px solid var(--amber);border-radius:3px;font-size:12px">
-        <b>Assessment:</b> Payment certification (35%) is <b>+6.74%</b> ahead of physical construction progress (28.26%). This is expected given the advance payment and early procurement milestones. However, management should confirm that M2.1 (Site Mobilization) and M2.2 (WTG Subcontract) OE certificates have been properly issued. Actual cash outflow is only 10% (advance) — the remaining 25% certified is deferred until 31 Dec 2028.
+        <b>Assessment:</b> Payment certification (35%) is <b>+5.07%</b> ahead of physical construction progress (29.93%, 30 Jun 2026). This is expected given the advance payment and early procurement milestones. However, management should confirm that M2.1 (Site Mobilization) and M2.2 (WTG Subcontract) OE certificates have been properly issued. Actual cash outflow is only 10% (advance) — the remaining 25% certified is deferred until 31 Dec 2028.
       </div>
     </div>
 
@@ -2442,10 +2447,10 @@
   </section>
 
   <footer>
-    15 Jun 2026 &nbsp;·&nbsp; B.GRIMM Project Coordination Team &nbsp;·&nbsp;
+    23 Jun 2026 &nbsp;·&nbsp; B.GRIMM Project Coordination Team &nbsp;·&nbsp;
     Prepared by Ophat Ketprakong / Phakhathamon Sompong &nbsp;·&nbsp; Reviewed by Nopparat Honghin / Ophat Ketprakong / Parisa Noosaeng &nbsp;·&nbsp;
     Approved by Paitool Paisalsukwittaya (EVP)<br>
-    Data source: Weekly Report No.28 (9 Jun 2026) · TWF S-CURVE-V5-260609 · Data as of 9 Jun 2026 · Narrative updated per Weekly Meeting No.28 (11 Jun 2026) · Rev. 2026-06-15
+    Data source: Weekly Report No.29 · TWF S-CURVE-V5-260630 (Checked by OE) · Data as of 30 Jun 2026 · Narrative updated per MOM Weekly Meeting No.029 (25 Jun 2026, OPK rev.) · Rev. 2026-06-30
   </footer>
 
 </div>
@@ -2578,7 +2583,7 @@
         e.stopPropagation();
         const n = parseInt(el.id.split('-')[1]);
         const c = WTG_COORDS[n];
-        const blocked = FARMLAND.includes(n) ? ' &nbsp;<span style="color:#ffcc80">⛔ Blocked — Farmland Conversion</span>' : '';
+        const blocked = FARMLAND.includes(n) ? ' &nbsp;<span style="color:#ffcc80">⛔ Pending — Farmland Conversion</span>' : '';
         bar.innerHTML = `<b>WTG #${n}</b> &nbsp;EL: ${c.el}m &nbsp;`+
           `<span style="font-size:10px;opacity:.8">${c.lat.toFixed(6)}°N, ${c.lon.toFixed(6)}°E</span> &nbsp;|&nbsp;`+
           ` Foundation: <span style="color:#ffb3b3">Not Started (0%)</span>`+
@@ -2797,7 +2802,7 @@
           .addTo(LG['wtg'])
           .on('click',e=>{
             L.DomEvent.stopPropagation(e);
-            const bl=blocked?' &nbsp;<span style="color:#ffcc80">⛔ Farmland Blocked</span>':'';
+            const bl=blocked?' &nbsp;<span style="color:#ffcc80">⛔ Farmland: Permit Pending</span>':'';
             bar.innerHTML=`<b>WTG #${n}</b> &nbsp;EL:${c.el}m &nbsp;`+
               `<span style="font-size:10px;opacity:.8">${c.lat.toFixed(5)}°N, ${c.lon.toFixed(5)}°E</span>`+
               ` &nbsp;| Foundation: <span style="color:#ffb3b3">Not Started (0%)</span>${bl}`+
@@ -4319,7 +4324,7 @@
       </tr>`;
     }).join('');
     // Update KPI tiles
-    const gapPct = (certPct - 28.26).toFixed(1);
+    const gapPct = (certPct - 29.93).toFixed(1);
     const gapEl = document.getElementById('ms-gap-val');
     const gapSub = document.getElementById('ms-gap-sub');
     if (gapEl) { gapEl.textContent = (parseFloat(gapPct)>=0?'+':'')+gapPct+'%'; }
@@ -4345,83 +4350,84 @@
 // REPORT DATA — update this object every week along with HTML
 // ══════════════════════════════════════════════════════════
 window.REPORT_DATA = {
-  revDate:       '2026-06-10',
-  reportDate:    '9 Jun 2026',
-  weekNum:       45,
-  cutoffDate:    '9 Jun 2026',
-  momRef:        'Weekly Report No.28 (9 Jun 2026)',
-  overallPlan:   33.39,
-  overallActual: 28.86,
-  overallVar:    -4.53,
+  revDate:       '2026-06-30',
+  reportDate:    '30 Jun 2026',
+  weekNum:       48,
+  cutoffDate:    '30 Jun 2026',
+  momRef:        'Weekly Report No.29 — S-Curve Checked by OE (30 Jun 2026); MOM Weekly Meeting No.029 (25 Jun 2026)',
+  overallPlan:   35.33,
+  overallActual: 29.93,
+  overallVar:    -5.40,
   varStatus:     'Red',
-  codWeeks:      81,
+  codWeeks:      78,
   wps: [
-    { name:'Engineering',          wt:10,  plan:77.43, actual:65.67, variance:-11.76, status:'Red',
-      drivers:'Permits & Approvals var widened to −23.00% (was −21.20%): METI Construction Plan Notification 41% (doc submission 70%); Farmland Conversion (Temp.) 50% (approval stage 50%); Forest Road design not started (TOKO payment); SLD Rev.4 review overdue' },
-    { name:'Procurement',          wt:30,  plan:30.56, actual:29.46, variance:-1.10,  status:'Amber',
-      drivers:'Holding at Amber, marginal recovery (−1.12%→−1.10%). WTG&Foundation 16.80%, WTG Related Equipment 9.78%, BOP Equipment 80.00% unchanged; FAT 3rd-party candidate list with B.GRIMM; DENZAI preparing transport route PPT' },
-    { name:'Construction',         wt:55,  plan:29.96, actual:23.74, variance:-6.22,  status:'Red',
-      drivers:'33kV Switchgear 0% vs plan ~70% (was 60%); Internal conduit +300m (cum. 7,472m, 59.66%); External conduit +585m (cum. 14,299m, 58.33%); Civil Work slipping (Maintenance Road 21.0%, Gorinhara River 50.0%); WTG Foundation not started' },
+    { name:'Engineering',          wt:10,  plan:78.38, actual:65.67, variance:-12.71, status:'Red',
+      drivers:'Permits & Approvals −25.70% (was −24.80%): List of Permits −28.56%; METI delayed to ~1 Jul 2026 (CEEC workload — MOM-029); Farmland Conversion submitted to Committee 18 Jun, MAFF review pending; TOKO: CEEC preparing contract format; SD&DD 93.25%/86.50% (no change); Forest Road design pending TOKO resolution' },
+    { name:'Procurement',          wt:30,  plan:30.56, actual:29.47, variance:-1.09,  status:'Amber',
+      drivers:'BOP MILESTONE: all 4 BOP items reached 100%/100% (was mixed); SCADA 0%/0% (manufacturer not selected — MOM-029); WTG & Foundation Equipment Plan 18.20%/Actual 16.83% (−1.37%); CEEC procurement plan targeting end-Jul 2026; B.GRIMM visit mid-late Jul; EVP Paitool visiting 27–31 Jul for SCADA discussion' },
+    { name:'Construction',         wt:55,  plan:33.32, actual:25.69, variance:-7.63,  status:'Red',
+      drivers:'33kV var −37.42%: Switchgear 0% vs plan 100% (−100%); Internal TL 40.69% vs plan 70% (−29.31%); External TL 35.25% vs plan 49.5% (−14.25%); Transport Route civil AHEAD +22% (pruning 45% vs 0% plan); Maintenance Road 21% vs plan 51% (−30%); Forest Road 36% vs plan 38.25% (−2.25%); Crushed-stone removal 95% (nearly done); WTG Foundation 0% vs plan 8% (−8%) — pending permits' },
     { name:'Test & Commissioning', wt:5,   plan:0.00,  actual:8.00,  variance:8.00,   status:'Green',
       drivers:'Grid connection 40% complete (110kV substation re-commissioning prep — ahead of plan)' }
   ],
   attentionItems: [
-    '⚠ Overall variance widened to −4.53% (from −3.76%); Engineering Permits & Approvals −23.00% (was −21.20%); Construction −6.22% (was −4.87%); 3 of 4 WPs remain Red',
-    '33kV Switchgear — still 0% vs plan now ~70%; GIS unit at site; civil/foundation works not started, pending METI Construction Plan Notification approval (now 41% / doc submission 70%)',
-    'Farmland Conversion (Temporary) — now 50% overall (doc prep 100%, doc submission 100%, approval stage 50%); city/prefectural/government deliberation Jun–Aug 2026; committee target 31 Jul 2026 still valid',
-    'Construction Plan Notification (METI) — 41% overall (doc submission progressed to 70%); CEEC preparing/reviewing for submission; target 30 Jun 2026 unchanged — any slip delays commencement mid-Jul',
-    '33kV Conduit progress accelerating but still behind plan — Internal +300m (cum. 7,472m, 59.66% vs ~99% plan); External +585m (cum. 14,299m, 58.33% vs ~75.5% plan); new "Cable Joint Work" category added (0% — not yet started)'
+    '⚠ Overall variance −5.40% (improved from −5.51% week prior); Construction var −7.63% (33kV −37.42%); 3 of 4 WPs remain Red; BOP milestone achieved — all 4 BOP items at 100%',
+    'Farmland Conversion (Temporary) — CEEC submitted all documents to Farmland Committee 18 Jun 2026; MAFF review/acceptance pending; approval expected end-Aug 2026 if accepted on schedule (+1 month per subsequent cycle); WTG Foundation and WTGs No.1–4 on hold',
+    'Forest Land Development / TOKO — CEEC preparing CEEC-TOKO contract format; LOHAS to support joint handover-acceptance docs; drawings to follow after contract; WTG 1,2,3,4 pending contract finalization',
+    'METI Construction Plan Notification — submission ~1 Jul 2026 (delayed from 30 Jun); 30-day waiting period follows; construction commencement on hold until expiry (~early Aug 2026)',
+    'SCADA manufacturer not yet selected by CEEC; EVP Paitool visiting Japan 27–31 Jul for SCADA discussion; order must be placed Q3 2026 to meet commissioning Aug 2027'
   ],
   permitsStatus: [
     { name:'EIA', status:'Done', note:'Approved' },
     { name:'NK Certification (M1–M4)', status:'Done', note:'M4 received ✅ — closed per MOM-009/MR-009' },
-    { name:'Farmland Conversion (Temp)', status:'In Progress', note:'(9 Jun) Now 50% overall (doc prep 100%, doc submission 100%, approval 50%); city/pref/government deliberation Jun–Aug 2026; committee target 31 Jul 2026' },
-    { name:'Forest Land Development', status:'In Progress', note:'(9 Jun) TOKO payment unresolved; confirmation meeting not held; WTG 1,2,3,4 gated; Katsuta met TOKO' },
-    { name:'Construction Plan Notification (METI)', status:'In Progress', note:'(9 Jun) Now 41% overall (doc submission 70%); CEEC preparing/reviewing for submission; target 30 Jun 2026 unchanged; 30-day wait → commencement mid-Jul' },
+    { name:'Farmland Conversion (Temp)', status:'In Progress', note:'(25 Jun) CEEC submitted all documents to Farmland Committee on 18 Jun 2026; MAFF review and acceptance expected by end-Jun 2026; if accepted, matter to be placed on August Farmland Committee agenda (approval ~end-Aug 2026); each additional submission cycle = ~1 month slip; entire construction area on hold — WTG Foundation (−8%) and WTGs No.1–4 pending permit' },
+    { name:'Forest Land Development', status:'In Progress', note:'(25 Jun) CEEC preparing CEEC-TOKO contract format; LOHAS to support joint handover-acceptance documentation (to be signed by CEEC, OTAK, LOHAS, B.GRIMM); drawings and specifications to follow after contract and TOKO structural-designer coordination; WTG 1,2,3,4 pending contract finalization' },
+    { name:'Construction Plan Notification (METI)', status:'In Progress', note:'(25 Jun) Submission delayed ~1 week due to CEEC workload; new target ~1 Jul 2026 (was 30 Jun); 30-day waiting period follows submission → construction commencement ~early Aug 2026' },
     { name:'110kV Substation', status:'Done', note:'Re-commissioning test Q3 2027' },
     { name:'Road Use Permission', status:'Done', note:'Approved 26-Nov-2025' },
     { name:'COD Application', status:'In Progress', note:'To be filed closer to COD' }
   ],
   constructionNotes: [
-    'Internal 33kV Conduit: +300 m this period (cumulative 7,472 m, 59.66%); Cable Pull-in unchanged 28.59%; Road Cutting unchanged 73.61%; new Cable Joint Work category 0%',
-    'External 33kV Conduit: +585 m this period (cumulative 14,299 m, 58.33%); Cable Pull-in unchanged 14.65%; Road Cutting unchanged 81.23%; new Cable Joint Work category 0%',
-    '33kV Switchgear: Not started — GIS unit ✅ at site; civil/foundation pending METI notification (now 41%); plan now ~70% (was 60%)',
-    'WTG Foundation: Not started — gated by Farmland Conversion (50%) + METI notification (41%)',
-    'Forest Road: ahead +5.4% (was +8.1%, gap narrowing); design work not started pending TOKO payment resolution',
-    'Maintenance Road: 21.0% actual vs plan 42.0% (−21.0%, was −19.5%); farmland sections pending Farmland Conversion permit',
-    'Gorinhara River: progressed 42.5%→50.0% vs plan 60.0% (−10.0%, was −17.5%)'
+    'Internal 33kV Transmission Line: Actual 40.69% vs plan 70.00% (−29.31%, was −27.31%)',
+    'External 33kV Transmission Line: Actual 35.25% vs plan 49.50% (−14.25%, was −12.93%); MOM-029: External poles No.13,15,27 (347m) progressing',
+    '33kV Switchgear: Not started — Actual 0% vs plan 100.00% (−100.00%, was −90.00%); pending METI Construction Plan Notification (~1 Jul 2026)',
+    'WTG Foundation: Not started — Actual 0% vs plan 8.00% (−8.00%); pending Farmland Conversion (submitted 18 Jun, MAFF review in progress, target end-Aug) and Forest Land/TOKO',
+    'Forest Road: 36.0% vs plan 38.25% (−2.25%, was +0.0%); 3-6 Unit Road lagging (40% vs plan 55%); 1-2 Unit Road ahead (40% vs plan 30%)',
+    'Maintenance Road: 21.0% actual vs plan 51.0% (−30.0%, was −27.0%); farmland sections on hold pending Farmland Conversion permit',
+    'Crushed-Stone removal: 95.0% vs plan 100% (−5.0%, was −7.5%); re-installation 0% vs plan 100% (−100%, was −90%) — awaiting permit and removal completion',
+    'Gorinhara River: 50.0% vs plan 65.0% (−15.0%, was −10.0%)',
+    'Transport Route civil AHEAD: Plan 45% vs Actual 67% (+22%); pruning/disforestation 45% vs 0% plan (significant pull-ahead)'
   ],
   procurementNotes: [
-    'WTG Delivery/Procurement: CEEC discussing with Vensys; DENZAI preparing delivery plan report + PPT presentation — B.GRIMM requested scheduled presentation date',
-    'FAT 3rd-Party: ✅ CEEC sent candidate institution list to B.GRIMM; CEEC intends to use internationally recognized institution',
-    'Transport Route: DENZAI preparing documentation; Sakai Minato port confirmed (Tottori rejected)',
-    'OTAK Payment: B.GRIMM Finance team progressing; OTAK to attach completed deliverable documents with each invoice going forward',
-    'CEEC Advance Payment: Closed ✅'
+    'BOP MILESTONE: all 4 BOP equipment items reached 100% actual (was mixed) — major positive milestone (30 Jun 2026)',
+    'SCADA: manufacturer not yet selected — MOM-029 (25 Jun); EVP Paitool visiting Japan 27–31 Jul for SCADA discussion 28–30 Jul; order must be placed Q3 2026',
+    'CEEC procurement plan: targeting end-Jul 2026 (MOM-029); draft before B.GRIMM mid-late Jul visit',
+    'WTG & Foundation Equipment: Plan 18.20% / Actual 16.83% (−1.37%)'
   ],
   otherNotes: [
     'Nacelle Logo: 5 options sent to EPC/OE; B.GRIMM/CEEC management final decision still pending; EPC urgently needs final version for Vensys',
-    'Mr. Paitool (B.GRIMM EVP) site visit: scheduled 26 Jul – 2 Aug 2026',
-    'Revised Master Schedule: on hold — CEEC management approval not yet obtained',
-    'Next meeting: TBC'
+    'Revised Master Schedule: still on hold — CEEC has not started preparation pending the Farmland Conversion outcome',
+    'Next meeting: 2 Jul 2026 (Thursday), 15:00 JPT / 14:00 CNT / 13:00 THT',
+    'Next monthly meeting: 27 Jul 2026'
   ],
   scurveTrend: [
-    { week:41, date:'19-May-2026', plan:30.86, actual:28.46, variance:-2.40, status:'Amber' },
-    { week:42, date:'26-May-2026', plan:31.52, actual:28.70, variance:-2.82, status:'Amber' },
     { week:43, date:'2-Jun-2026',  plan:32.46, actual:28.73, variance:-3.73, status:'Red'   },
     { week:44, date:'4-Jun-2026',  plan:32.49, actual:28.73, variance:-3.76, status:'Red'   },
-    { week:45, date:'9-Jun-2026',  plan:33.39, actual:28.86, variance:-4.53, status:'Red'   }
+    { week:45, date:'9-Jun-2026',  plan:33.39, actual:28.86, variance:-4.53, status:'Red'   },
+    { week:46, date:'16-Jun-2026', plan:33.62, actual:28.90, variance:-4.73, status:'Red'   },
+    { week:47, date:'23-Jun-2026', plan:34.43, actual:28.92, variance:-5.51, status:'Red'   },
+    { week:48, date:'30-Jun-2026', plan:35.33, actual:29.93, variance:-5.40, status:'Red'   }
   ],
   engineeringNotes: [
-    '風車基礎関連詳細図 (WTG Foundation Detail Drawings) — "Need to be prepared/reviewed" per Eng. Progress V5-260609',
-    'Forest Road design: confirmation meeting between designer (Airu/DENZAI) and WTG foundation designer NOT yet held; TOKO payment blocking'
+    '風車基礎関連詳細図 (WTG Foundation Detail Drawings) — "Need to be prepared/reviewed" per Eng. Progress V5-260630',
+    'Forest Road design: confirmation meeting between designer (Airu/DENZAI) and WTG foundation designer NOT yet held; TOKO contract format being prepared by CEEC (MOM-029)'
   ],
   keyItems: [
-    { item:'Overall variance widened to −4.53% (from −3.76%)', owner:'CEEC / B.GRIMM', status:'Critical', action:'Monitor Engineering Permits & Approvals (−23.00%) and Construction (−6.22%); demand CEEC management decision on Revised MS' },
-    { item:'33kV Switchgear — not started vs plan ~70%', owner:'CEEC', status:'Not Started', action:'GIS unit at site; mobilize civil crew immediately after METI approval (mid-Jul target)' },
-    { item:'Farmland Conversion (Temp.) — now 50% overall', owner:'EPC / LOHAS', status:'In Progress', action:'Monitor city/prefectural/government deliberation stages (Jun–Aug 2026); committee target 31 Jul 2026 must be maintained' },
-    { item:'METI Construction Plan Notification — now 41% (doc submission 70%)', owner:'Owner / CEEC', status:'In Progress', action:'No extension allowed; submission by 30 Jun is critical path for mid-Jul commencement' },
-    { item:'TOKO payment — Forest Road/Forest Land Development not started', owner:'CEEC / LOHAS', status:'Not Started', action:'Confirm TOKO payment resolution; arrange Forest Road/WTG foundation designer meeting immediately after payment' },
-    { item:'Civil Work slipping — Maintenance Road (−21.0%), Gorinhara River (−10.0%)', owner:'CEEC', status:'In Progress', action:'Request recovery plan for civil works outside farmland-blocked sections' },
+    { item:'Farmland Conversion (Temp.) — MAFF review/acceptance pending; August committee meeting if accepted', owner:'EPC / LOHAS', status:'In Progress', action:'Monitor MAFF response; if accepted, approval ~end-Aug 2026 allows WTG Foundation and WTGs No.1–4 to proceed' },
+    { item:'METI Construction Plan Notification — submission ~1 Jul 2026; 30-day waiting period follows', owner:'Owner / CEEC', status:'In Progress', action:'30-day waiting period post-submission means construction start ~early Aug 2026; monitor closely' },
+    { item:'TOKO/Forest Land — CEEC preparing CEEC-TOKO contract; drawings pending', owner:'CEEC / LOHAS', status:'In Progress', action:'LOHAS to finalize joint handover-acceptance documentation (CEEC/OTAK/LOHAS/B.GRIMM); coordinate TOKO structural designer meeting post-contract' },
+    { item:'33kV Switchgear — 0% vs plan 100% (−100%); Maintenance Road 21% vs plan 51% (−30%)', owner:'CEEC', status:'Not Started', action:'Mobilize Switchgear civil works after METI submission; request Maintenance Road recovery plan for non-farmland sections' },
+    { item:'BOP Procurement milestone — 4 equipment items at 100%; SCADA 0% (manufacturer not selected)', owner:'CEEC / B.GRIMM', status:'In Progress', action:'Paitool B.GRIMM EVP visiting Japan 27–31 Jul for SCADA discussion; CEEC to select manufacturer and proceed' },
     { item:'Nacelle Logo — management decision overdue', owner:'B.GRIMM Management', status:'Urgent', action:'Escalate to EVP for final decision; EPC cannot finalize with Vensys without it' }
   ],
   preparedBy:   'Ophat Ketprakong / Phakhathamon Sompong (B.Grimm Power PLC)',
@@ -4838,7 +4844,7 @@ function generateWordReport() {
 
   // ── S-Curve ──
   '<div class="sec-hd">S-Curve — Cumulative % Plan vs Actual</div>'+
-  '<p style="font-size:9pt;color:#555;margin:2px 0 6px">Source: TWF S-CURVE-V5-260609.xlsx (Checked by OE) · Execute Project Schedule</p>'+
+  '<p style="font-size:9pt;color:#555;margin:2px 0 6px">Source: TWF S-CURVE-V5-260630.xlsx (Checked by OE) · Weekly Report No.29 · Execute Project Schedule</p>'+
   svgSection +
   '<table style="width:100%;margin:6px 0"><thead><tr><th style="width:8%">Week</th><th style="width:16%">Period Ending</th><th style="width:12%;text-align:center">Plan %</th><th style="width:12%;text-align:center">Actual %</th><th style="width:12%;text-align:center">Variance</th><th style="width:10%;text-align:center">Status</th></tr></thead><tbody>'+scurveRows+'</tbody></table>'+
 
